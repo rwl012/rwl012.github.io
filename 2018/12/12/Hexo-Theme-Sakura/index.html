@@ -78,15 +78,15 @@
   }  /*页面暗黑模式*/
 
   .yemiana{
-    background-color: orange;
+    background-color:  rgba(231, 15, 15, 0);
     }
   @media (prefers-color-scheme: dark) {
     .yemiana {background:  rgba(29, 28, 28, 0.377);}
     
   }
   
-  @media (prefers-color-scheme: light) {
-    .yemiana {background: rgba(255, 255, 255, 0);}
+  @media (max-width: 840px) and (prefers-color-scheme: light) {
+    .yemiana {background:white;}
   
   }  /*页面暗黑模式*/
 .dibu
@@ -1061,7 +1061,7 @@ $(document).ready(function() {
       
     
   </p>
-  <div class="heiyebutton"><a onclick="switchNightMode()"><li id="nightMode" aria-hidden="true"><a onclick="switchNightMode()"><img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.3/img/nightbottom/sunandmoon.png" style="width: 27px;height: 27px" id="nightMode" aria-hidden="false"></i></a></li></a></div>
+
   <ul id="menu-new-1" class="menu">
     
       <li>

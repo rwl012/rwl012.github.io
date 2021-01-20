@@ -1705,7 +1705,7 @@ a:hover,a:active {
     padding:0 10px;
     margin-left:auto;
     margin-right:auto;
-    background-color:rgba(255,255,255,.8)   /*暗黑模式背景*/
+    background-color:rgba(255,255,255,.8)   /*背景暗黑模式背景*/
 }
 /*暗黑模式背景设置*/
 @media (prefers-color-scheme: dark) {
@@ -1713,8 +1713,8 @@ a:hover,a:active {
     
   }
   
-  @media (prefers-color-scheme: light) {
-    .site-content {background: rgba(255, 255, 255, 0.199); color:  #555;}
+  @media (max-width:1000px) and (prefers-color-scheme: light) {
+    .site-content {background:white; color:  #555;}
   
   }
 
@@ -3989,7 +3989,7 @@ li.feature-2 {
 }
 @media(max-width:860px) {
     .notice {
-        display: none;
+        display: block;
         margin-top:40px;
         margin-bottom:20px
     }
@@ -8190,7 +8190,7 @@ td.hljs-ln-numbers {
 }*/
 .deng-t {
     font-family: 华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;
-    font-size: 2.5rem;
+    font-size: 20px;
     color: #dc8f03;
     font-weight:bolder;
     line-height: 30px;
