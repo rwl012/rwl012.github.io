@@ -2120,7 +2120,7 @@ i.iconfont.hotpost {
 }
 .site-footer {  /*底部背景设置*/
     padding:2%;
-    background:rgba(29, 28, 28, 0.377);
+    background:rgba(255, 255, 255, 0.171);
     max-width:800px;
     margin-left:auto;
     margin-right:auto
@@ -8190,7 +8190,7 @@ td.hljs-ln-numbers {
 }*/
 .deng-t {
     font-family: 华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     color: #dc8f03;
     font-weight:bolder;
     line-height: 30px;
