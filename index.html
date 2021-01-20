@@ -65,7 +65,7 @@
 </html>
 <style>
   .yemian{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: white;
     }
   @media (prefers-color-scheme: dark) {
     .yemian {background:  rgba(29, 28, 28, 0.678);}
@@ -91,7 +91,7 @@
   }  /*页面暗黑模式*/
 .dibu
 {
-  background: rgba(255, 255, 255, 0)
+  background: white
 }
 @media (prefers-color-scheme: dark) {
     .dibu {background:  rgba(29, 28, 28, 0.678);}
@@ -388,7 +388,13 @@
 <style type="text/css">
 
 #duanluo{
-  text-align: center
+  text-align: center;
+  color:#464646;
+}
+@media(max-width: 850px) and (prefers-color-scheme: dark) {
+  #duanluo{
+    text-align: center;color:#e2dbdb;
+  }
 }
 .index-home{
   margin: 0px;
@@ -399,6 +405,13 @@
   height: 50px;
   background-color:rgb(218, 5, 5);
 }
+@media(max-width: 5000px) and (prefers-color-scheme: light) {
+  .top{
+    height: 75px;
+    background-color: #ffffff00;
+  }
+}
+
 @media(max-width: 850px) and (prefers-color-scheme: dark) {
   .top{
     height: 50px;
@@ -459,7 +472,7 @@ body{
 </div>
 
 <div class="header-info">
-  <div><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center;">正在加载今日诗词....</p></p>
+  <div><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center">正在加载今日诗词....</p></p>
             <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         </p></div>
   <div class="top-social_v2">

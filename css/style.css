@@ -1243,12 +1243,12 @@ a:hover,a:active {
     margin:0 auto
 }
 .pattern-center-blank {
-    padding-top:75px;
+    padding-top:50px;
     background-color:#fff
 }
 /*清单页暗黑模式*/
 @media (prefers-color-scheme: dark) {
-    .pattern-center-blank {background:  #333;}
+    .pattern-center-blank {background:  rgb(32, 32, 32);}
     
   }
   
@@ -1708,8 +1708,13 @@ a:hover,a:active {
     background-color:rgba(255,255,255,.8)   /*背景暗黑模式背景*/
 }
 /*暗黑模式背景设置*/
-@media (prefers-color-scheme: dark) {
-    .site-content {background:  rgba(51, 51, 51, 0); color: white;}
+
+@media (max-width:5000px) and  (prefers-color-scheme: dark) {
+    .site-content {background: rgba(29, 28, 28, 0); color: white;}
+    
+  }
+@media (max-width:1000px) and  (prefers-color-scheme: dark) {
+    .site-content {background: rgba(29, 28, 28, 0.678); color: white;}
     
   }
   
