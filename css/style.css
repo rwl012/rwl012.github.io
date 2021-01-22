@@ -1246,6 +1246,7 @@ a:hover,a:active {
     padding-top:50px;
     background-color:#fff
 }
+
 /*清单页暗黑模式*/
 @media (prefers-color-scheme: dark) {
     .pattern-center-blank {background:  rgb(32, 32, 32);}
@@ -1713,6 +1714,10 @@ a:hover,a:active {
     .site-content {background: rgba(29, 28, 28, 0); color: white;}
     
   }
+@media (max-width:5000px) and  (prefers-color-scheme: light) {
+    .site-content {background: rgba(255, 255, 255, 0)}
+    
+  }
 @media (max-width:1000px) and  (prefers-color-scheme: dark) {
     .site-content {background: rgba(29, 28, 28, 0.678); color: white;}
     
@@ -1883,13 +1888,22 @@ i.iconfont.hotpost {
     opacity:0;
     transition:box-shadow .3s ease
 }
+
+@media (prefers-color-scheme: dark) {
+    .post-list-thumb {background:#464646;}
+}
+
+@media (prefers-color-scheme: light) {
+    .post-list-thumb {background:#fdfdfd}
+}
+
 @media(min-width:860px) {
     .post-list-thumb:hover {
     box-shadow:0 5px 10px 5px rgba(110,110,110,.4)
 }
 }@media(max-width:860px) {
     .post-list-thumb {
-    margin:0;
+    margin:0 0 25px 0;
     height:auto
 }
 }.post-list-thumb i {
@@ -2007,8 +2021,9 @@ i.iconfont.hotpost {
     margin:0;
     padding:20px;
     float:none;
-    box-shadow:none;
-    border-top:0
+    box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
+    border-radius: 0 0 25px 25px;
+    border-top:0;
 }
 .post-list-thumb::before {
     content:'';
@@ -2031,7 +2046,7 @@ i.iconfont.hotpost {
     text-align:right
 }
 .post-list-thumb-left .post-thumb a,.post-thumb a {
-    border-radius:10px
+    border-radius:10px 10px 0 0
 }
 }@media(max-width:600px) {
     .post-thumb a {
@@ -2139,7 +2154,9 @@ i.iconfont.hotpost {
   @media (prefers-color-scheme: light) {
     .site-footer {background: rgba(255, 255, 255, 0.171); color:  #555;}
   }
-
+  @media(max-width:5000px) and (prefers-color-scheme: light) {
+    .site-footer {background: rgba(255, 255, 255, 0); color:  #555;}
+  }
 .site-info {
     text-align:center;
     font-size:13px;
@@ -3220,8 +3237,23 @@ h1.cat-title {
 header.page-header {
     position:relative;
     text-align:center;
-    margin-bottom:50px;
-    color:#9c9c9c
+    color:#9c9c9c;
+}
+@media(max-width:5000px){
+    header.page-header {
+        position:relative;
+        text-align:center;
+        color:#9c9c9c;
+        margin-top: 30px;
+    }
+}
+@media(max-width:860px){
+    header.page-header {
+        position:relative;
+        text-align:center;
+        color:#9c9c9c;
+        margin-top: 0px;
+    }
 }
 .links {
     margin-bottom:80px
@@ -5132,7 +5164,7 @@ i.iconfont.js-toggle-search.iconsearch {
 }
 
 @media (prefers-color-scheme: dark) {                 /*移动端侧边栏暗黑模式*/
-    #mo-nav {background-color:#000000;}
+    #mo-nav {background-color:#333333;}
     
   }
   
@@ -8309,6 +8341,7 @@ td.hljs-ln-numbers {
     .night #colophon,
     .night #main-container,
     .night #page ,
+    .night .post-list-thumb,
     .night #content,
     .night #contentss,
     .night .pattern-center::after,

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rwl012.github.io/"/>
-  <updated>2021-01-02T05:24:22.688Z</updated>
+  <updated>2021-01-22T07:58:58.034Z</updated>
   <id>http://rwl012.github.io/</id>
   
   <author>
@@ -18,17 +18,25 @@
   
   <entry>
     <title>测试</title>
-    <link href="http://rwl012.github.io/2021/01/02/%E6%B5%8B%E8%AF%95/"/>
-    <id>http://rwl012.github.io/2021/01/02/测试/</id>
-    <published>2021-01-02T05:24:22.000Z</published>
-    <updated>2021-01-02T05:24:22.688Z</updated>
+    <link href="http://rwl012.github.io/2021/01/21/%E6%B5%8B%E8%AF%95/"/>
+    <id>http://rwl012.github.io/2021/01/21/测试/</id>
+    <published>2021-01-21T05:24:22.000Z</published>
+    <updated>2021-01-22T07:58:58.034Z</updated>
     
     <summary type="html">
     
+      【图文无关】仅测试标签显示是否正常
+    
     </summary>
     
-      <category term="技术" scheme="http://rwl012.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="生活" scheme="http://rwl012.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
+    
+      <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="test" scheme="http://rwl012.github.io/tags/test/"/>
+    
+      <category term="テスト" scheme="http://rwl012.github.io/tags/%E3%83%86%E3%82%B9%E3%83%88/"/>
     
   </entry>
   
@@ -37,20 +45,20 @@
     <link href="http://rwl012.github.io/2021/01/01/hello-world/"/>
     <id>http://rwl012.github.io/2021/01/01/hello-world/</id>
     <published>2021-01-01T08:19:29.331Z</published>
-    <updated>2021-01-01T08:19:29.331Z</updated>
+    <updated>2021-01-21T13:35:48.307Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      【图文无关】仅测试标签显示是否正常
     
     </summary>
     
+    
+      <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="寒蝉" scheme="http://rwl012.github.io/tags/%E5%AF%92%E8%9D%89/"/>
+    
+      <category term="レナ" scheme="http://rwl012.github.io/tags/%E3%83%AC%E3%83%8A/"/>
     
   </entry>
   
@@ -59,20 +67,22 @@
     <link href="http://rwl012.github.io/2018/12/12/Hexo-Theme-Sakura/"/>
     <id>http://rwl012.github.io/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2020-03-16T10:41:30.000Z</updated>
+    <updated>2021-01-21T13:35:44.706Z</updated>
     
     <summary type="html">
     
-      hexo-sakura主题使用教程
+      【图文无关】仅测试标签显示是否正常
     
     </summary>
     
       <category term="技术" scheme="http://rwl012.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="http://rwl012.github.io/tags/web/"/>
+      <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="悦读" scheme="http://rwl012.github.io/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="寒蝉" scheme="http://rwl012.github.io/tags/%E5%AF%92%E8%9D%89/"/>
+    
+      <category term="梨花" scheme="http://rwl012.github.io/tags/%E6%A2%A8%E8%8A%B1/"/>
     
   </entry>
   
