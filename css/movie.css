@@ -28,7 +28,6 @@
   }
 
   .moviepic {
-    min-height:120px;
     max-height:200px;
     background-position:center center;
     background-repeat:no-repeat;
@@ -133,7 +132,7 @@
     text-shadow: 0 0 2px #ddd;
 }
 
-.on { color: #fff; display: none; text-indent: 10px;}
+.on { color: #fff; display: none; text-indent: -20px;}
 .off { color: #fff; display: inline-block; text-indent: 30px;}
 .button-label .circle{
     left: 0;
@@ -145,16 +144,36 @@
 #toggle-button:checked + label.button-label .on{ display: inline-block; }
 #toggle-button:checked + label.button-label .off{ display: none; }
 #toggle-button:checked + label.button-label{
-    background-color: #d13535;
+    background-color: #4adb62;
 }
 
 .yujing{
-  margin-left: 46%;
   margin-top:15px;
 }
 @media(max-width:860px){
   .yujing{
-    margin-left: 42%;
     margin-top:15px;
   }
+}
+
+.horror{
+  background-image:url(/images/movie/horror.png);
+  width: 100%;
+  height: 155px;
+  margin: auto;
+}
+
+@media(max-width:860px){
+  .horror{
+    background-image:url(/images/movie/mobilehorror.png);
+    width: 389px;
+    height: 150px;
+  }
+}
+
+.kuang{
+  background-color: #ecebeb59;
+  border-radius: 20px;
+  padding-bottom: 15px;
+  background-image: url(/images/cover/guancha.gif);
 }
