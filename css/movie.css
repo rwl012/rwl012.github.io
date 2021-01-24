@@ -2,12 +2,13 @@
 
 .moviepic {
   min-height:180px;
-  max-height:200px;
+  max-height:180px;
   background-position:center center;
   background-repeat:no-repeat;
   -webkit-background-size:cover;
   -moz-background-size:cover;
-  background-size:cover
+  background-size:cover;
+  object-fit:cover
 }
 
 @media only screen and (max-width:860px){         /*移动端适配*/
@@ -28,7 +29,7 @@
   }
 
   .moviepic {
-    max-height:200px;
+    max-height:180px;
     background-position:center center;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -149,10 +150,12 @@
 
 .yujing{
   margin-top:15px;
+  text-align: center;
 }
 @media(max-width:860px){
   .yujing{
     margin-top:15px;
+    text-align: center;
   }
 }
 

@@ -1,4 +1,43 @@
+<style>
+  .yemian{
+    background-color: white;
+    }
+  @media (prefers-color-scheme: dark) {
+    .yemian {background:  rgba(29, 28, 28, 0.678);}
+    
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .yemian {background: rgba(255, 255, 255, 0);}
+  
+  }  /*页面暗黑模式*/
 
+  .yemiana{
+    background-color:  rgba(231, 15, 15, 0);
+    }
+  @media (prefers-color-scheme: dark) {
+    .yemiana {background:  rgba(29, 28, 28, 0.377);}
+    
+  }
+  
+  @media (max-width: 840px) and (prefers-color-scheme: light) {
+    .yemiana {background:white;}
+  
+  }  /*页面暗黑模式*/
+.dibu
+{
+  background: white
+}
+@media (prefers-color-scheme: dark) {
+    .dibu {background:  rgba(29, 28, 28, 0.678);}
+    
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .dibu {background: rgba(255, 255, 255, 0);}
+  
+  }
+</style>
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -63,46 +102,6 @@
   </style>
 </head>
 </html>
-<style>
-  .yemian{
-    background-color: white;
-    }
-  @media (prefers-color-scheme: dark) {
-    .yemian {background:  rgba(29, 28, 28, 0.678);}
-    
-  }
-  
-  @media (prefers-color-scheme: light) {
-    .yemian {background: rgba(255, 255, 255, 0);}
-  
-  }  /*页面暗黑模式*/
-
-  .yemiana{
-    background-color:  rgba(231, 15, 15, 0);
-    }
-  @media (prefers-color-scheme: dark) {
-    .yemiana {background:  rgba(29, 28, 28, 0.377);}
-    
-  }
-  
-  @media (max-width: 840px) and (prefers-color-scheme: light) {
-    .yemiana {background:white;}
-  
-  }  /*页面暗黑模式*/
-.dibu
-{
-  background: white
-}
-@media (prefers-color-scheme: dark) {
-    .dibu {background:  rgba(29, 28, 28, 0.678);}
-    
-  }
-  
-  @media (prefers-color-scheme: light) {
-    .dibu {background: rgba(255, 255, 255, 0);}
-  
-  }
-</style>
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
@@ -349,6 +348,7 @@
 </header>
 
       <link rel="stylesheet" href="/css/movie.css">
+
 <div class="pattern-center-blank"></div>
 <div id="content" class="site-content">
   <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
@@ -363,7 +363,8 @@
         <div class="col s12 m6 " id="movie-0">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator moviepic lazyload" style="background-image: url(http://img.mw8.com/life/201701/7-1F123160107.png);" data-src="http://img.mw8.com/life/201701/7-1F123160107.png">
+              <div class="activator moviepic lazyload" >
+                <img class="moviepic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://img.mw8.com/life/201701/7-1F123160107.png" >
               </div>
             </div>
             <div class="card-content">
@@ -408,7 +409,8 @@
         <div class="col s12 m6 " id="movie-1">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator moviepic lazyload" style="background-image: url();" data-src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.5/img/other/image-404.png">
+              <div class="activator moviepic lazyload" >
+                <img class="moviepic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="https://i.pximg.net/img-original/img/2021/01/23/18/01/10/87244857_p0.jpg" >
               </div>
             </div>
             <div class="card-content">
@@ -453,7 +455,8 @@
         <div class="col s12 m6 " id="movie-2">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator moviepic lazyload" style="background-image: url();" data-src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.5/img/other/image-404.png">
+              <div class="activator moviepic lazyload" >
+                <img class="moviepic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="无" >
               </div>
             </div>
             <div class="card-content">
@@ -498,7 +501,8 @@
         <div class="col s12 m6 " id="movie-3">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator moviepic lazyload" style="background-image: url();" data-src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.5/img/other/image-404.png">
+              <div class="activator moviepic lazyload" >
+                <img class="moviepic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="无" >
               </div>
             </div>
             <div class="card-content">
@@ -543,7 +547,8 @@
         <div class="col s12 m6 " id="movie-4">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator moviepic lazyload" style="background-image: url();" data-src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.5/img/other/image-404.png">
+              <div class="activator moviepic lazyload" >
+                <img class="moviepic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="无" >
               </div>
             </div>
             <div class="card-content">
@@ -593,7 +598,8 @@
 <header class="page-header"><img src="/images/emoji/33-pa.png" style="width: 52px;height: 50px"> <h1 class="cat-title">恐怖片单推荐</h1><span class="cat-des"><p>这里推荐一些我看过的高分恐怖片</p> </span></header>
 
 <div class="kuang">
-<div style="text-align: center"><a href="/images/horror.png"><div class="horror"></a></div>
+
+  <div class="horror"></div>
 <div style="text-align: center;font-size: 16px;font-weight: bolder;"><img src="/images/movie/jingjie.svg" style="width: 2.5rem;height: 2.5rem;margin-top: 10px;"><br>下面介绍的是高分恐怖片，可能有恐怖的画面。</br>确定要点开吗?</br></div>
 
 <div class="toggle-button-wrapper yujing" >
@@ -751,7 +757,10 @@
   
 </article>
 </div>
-</div>         
+</div> 
+</body>
+</div>   
+     
 <script>
     var horrorfilm = document.getElementById("horrorfilm");
     horrorfilm.style.display = "none";
@@ -763,8 +772,7 @@
     }
     
 </script>
-</body>
-</div>
+
     </div>    
     <style>
     .fuhao{

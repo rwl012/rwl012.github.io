@@ -1,4 +1,43 @@
+<style>
+  .yemian{
+    background-color: white;
+    }
+  @media (prefers-color-scheme: dark) {
+    .yemian {background:  rgba(29, 28, 28, 0.678);}
+    
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .yemian {background: rgba(255, 255, 255, 0);}
+  
+  }  /*页面暗黑模式*/
 
+  .yemiana{
+    background-color:  rgba(231, 15, 15, 0);
+    }
+  @media (prefers-color-scheme: dark) {
+    .yemiana {background:  rgba(29, 28, 28, 0.377);}
+    
+  }
+  
+  @media (max-width: 840px) and (prefers-color-scheme: light) {
+    .yemiana {background:white;}
+  
+  }  /*页面暗黑模式*/
+.dibu
+{
+  background: white
+}
+@media (prefers-color-scheme: dark) {
+    .dibu {background:  rgba(29, 28, 28, 0.678);}
+    
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .dibu {background: rgba(255, 255, 255, 0);}
+  
+  }
+</style>
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -63,46 +102,6 @@
   </style>
 </head>
 </html>
-<style>
-  .yemian{
-    background-color: white;
-    }
-  @media (prefers-color-scheme: dark) {
-    .yemian {background:  rgba(29, 28, 28, 0.678);}
-    
-  }
-  
-  @media (prefers-color-scheme: light) {
-    .yemian {background: rgba(255, 255, 255, 0);}
-  
-  }  /*页面暗黑模式*/
-
-  .yemiana{
-    background-color:  rgba(231, 15, 15, 0);
-    }
-  @media (prefers-color-scheme: dark) {
-    .yemiana {background:  rgba(29, 28, 28, 0.377);}
-    
-  }
-  
-  @media (max-width: 840px) and (prefers-color-scheme: light) {
-    .yemiana {background:white;}
-  
-  }  /*页面暗黑模式*/
-.dibu
-{
-  background: white
-}
-@media (prefers-color-scheme: dark) {
-    .dibu {background:  rgba(29, 28, 28, 0.678);}
-    
-  }
-  
-  @media (prefers-color-scheme: light) {
-    .dibu {background: rgba(255, 255, 255, 0);}
-  
-  }
-</style>
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
@@ -384,14 +383,15 @@ margin-left: 200px;
   <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
     <header class="page-header"><h1 class="cat-title">番组推荐</h1> <span class="cat-des"><p>这里推荐的是精彩的番剧</p> </span></header>
 <body>
-  <p class='topbangumi '><img src="/images/bangumi/xiaopaimenggai.png" class="pic_bangumi"><p class="topbangumi"><img src="/images/bangumi/huangguan.svg" style="width: 30px;height: 30px;">极力推荐 TOP</p>
+  <p class='topbangumi '><img  class="pic_bangumi" src="/images/bangumi/xiaopaimenggai.png"><p class="topbangumi"><img src="/images/bangumi/huangguan.svg" style="width: 30px;height: 30px;">极力推荐 TOP</p>
   <article>
   <div class="bangumi">
     <div class="row" id="rootRow">
         <div class="col s12 m6 " id="lan">
           <div class="card hoverable" style="overflow: visible;">
             <div class="card-image waves-effect waves-block waves-light">
-              <div class="activator itempic lazyload"  data-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/d01373f082025aaf7e215f84f9edab64034f1a69.jpg">
+              <div class="activator newitempic lazyload">
+              <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://qqpublic.qpic.cn/qq_public/0/0-2861929662-4D5C6647DFA8159E15362C0E67E73A80/0?fmt=jpg&size=90&h=506&w=900&ppv=1/0" >
               </div>
             </div>
             <div class="card-content">
@@ -442,7 +442,8 @@ margin-left: 200px;
           <div class="col s12 m6" id="bangumi-0">
             <div class="card hoverable" style="overflow: visible;">
               <div class="card-image waves-effect waves-block waves-light">
-                <div class="activator itempic lazyload" style="background-image: url();" data-src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.5/img/other/image-404.png">
+                <div class="activator newitempic lazyload">
+                  <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="https://i.pximg.net/img-original/img/2021/01/23/18/01/10/87244857_p0.jpg" >
                 </div>
               </div>
               <div class="card-content">
@@ -498,7 +499,54 @@ margin-left: 200px;
           <div class="col s12 m6" id="bangu-0">
             <div class="card hoverable" style="overflow: visible;">
               <div class="card-image waves-effect waves-block waves-light">
-                <div class="activator itempic lazyload" style="background-image: url(https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg);" data-src="https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg">
+                <div class="activator newitempic lazyload">
+                  <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="https://i.pximg.net/img-original/img/2021/01/23/18/01/10/87244857_p0.jpg" >
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-title should-ellipsis activator grey-text text-darken-4">
+                  辉夜大小姐想让我告白？～天才们的恋爱头脑战～<i class="fa fa-commenting-o right"></i>
+                </div>
+                <p class="should-ellipsis-full">
+                さよならの朝に約束の花をかざろう</p>
+                <ul class="skill-list">
+                  <li class="skill">
+                    <div>
+                    连载中</div>
+                    <progress class="skill-1" max="100" value="100">
+                    </progress>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal" style="display: none; transform: translateY(0%);">
+                <span class="card-title grey-text text-darken-4">
+                  辉夜大小姐想让我告白？～天才们的恋爱头脑战～<i class="fa fa-close right"></i>
+                </span>
+                <span>
+                  さよならの朝に約束の花をかざろう<br>
+                </span>
+                <span>
+                  放送时间: 2020-04-12 SUN.<span>
+                    <p>秀才所聚集的名校·秀知院学园，在那里的学生会相遇的副会长·四宫辉夜与会长·白银御行，是任何人都认为适合对方的两个天才，原以为他们马上就能交往了，但他们因为自尊心超强一直没能告白！！在“如何让对方告白”的恋爱头脑战中绞尽脑汁的2人，那种罕见的才智热暴走！！已经无法控制了！！恋爱使天才变成笨蛋！！新感觉“斗智”？爱情喜剧、再次开战！！</p>
+                    <ul class="skill-list">
+                      <li class="skill">
+                        <div>
+                        连载中</div>
+                        <progress class="skill-1" max="100" value="100">
+                        </progress>
+                      </li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col s12 m6" id="bangu-1">
+            <div class="card hoverable" style="overflow: visible;">
+              <div class="card-image waves-effect waves-block waves-light">
+                <div class="activator newitempic lazyload">
+                  <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg" >
                 </div>
               </div>
               <div class="card-content">
@@ -540,10 +588,11 @@ margin-left: 200px;
             </div>
           </div>
         
-          <div class="col s12 m6" id="bangu-1">
+          <div class="col s12 m6" id="bangu-2">
             <div class="card hoverable" style="overflow: visible;">
               <div class="card-image waves-effect waves-block waves-light">
-                <div class="activator itempic lazyload" style="background-image: url(http://lain.bgm.tv/pic/cover/l/1d/08/114685_jZQ86.jpg);" data-src="http://lain.bgm.tv/pic/cover/l/1d/08/114685_jZQ86.jpg">
+                <div class="activator newitempic lazyload">
+                  <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://lain.bgm.tv/pic/cover/l/1d/08/114685_jZQ86.jpg" >
                 </div>
               </div>
               <div class="card-content">
@@ -585,10 +634,11 @@ margin-left: 200px;
             </div>
           </div>
         
-          <div class="col s12 m6" id="bangu-2">
+          <div class="col s12 m6" id="bangu-3">
             <div class="card hoverable" style="overflow: visible;">
               <div class="card-image waves-effect waves-block waves-light">
-                <div class="activator itempic lazyload" style="background-image: url(http://lain.bgm.tv/pic/cover/l/ec/c7/100444_yGsJZ.jpg);" data-src="http://lain.bgm.tv/pic/cover/l/ec/c7/100444_yGsJZ.jpg">
+                <div class="activator newitempic lazyload">
+                  <img class="newitempic lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://lain.bgm.tv/pic/cover/l/ec/c7/100444_yGsJZ.jpg" >
                 </div>
               </div>
               <div class="card-content">
