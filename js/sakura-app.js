@@ -1638,7 +1638,17 @@ $(function () {
   console.log('%c Mashiro %c', 'background:#24272A; color:#ffffff', '', 'https://2heng.xin/')
   console.log('%c hojun %c', 'background:#24272A; color:#ffffff', '', 'https://www.hojun.cn/')
   console.log('%c Github %c', 'background:#24272A; color:#ffffff', '', 'https://github.com/honjun/hexo-theme-sakura')
+  console.log('%c MIKI %c', 'background:#24272A; color:#ffffff', '', 'https://github.com/rwl012')
 })
+
+  if (document.getElementById('zoompic')) {
+    new Viewer(document.getElementById('zoompic'), {
+        toolbar: false,    
+    });
+    console.log('hello')
+  }
+
+
 var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
   isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
   isIe = navigator.userAgent.toLowerCase().indexOf('msie') > -1
@@ -1694,6 +1704,7 @@ $(document).ready(function () {
     $('p').remove('.head-copyright')
   }, 0)
 })
+
 
 // function aplayerF() {
 //     'use strict';
