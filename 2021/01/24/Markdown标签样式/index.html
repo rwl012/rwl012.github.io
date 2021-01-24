@@ -47,7 +47,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: test | MikiBlog</title>
+  <title itemprop="name">Markdown标签样式 | MikiBlog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -349,64 +349,147 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="test.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">test</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/01/21/测试/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">Markdown标签样式</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2021-1-24&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <p>以下CSS样式均来自<a href="https://bestzuo.cn/posts/halo-beauty.html" target="_blank" rel="noopener">Sanarous</a>大佬的博客</p>
+<h2 id="常规标签使用方式"><a href="#常规标签使用方式" class="headerlink" title="常规标签使用方式"></a><strong>常规标签使用方式</strong></h2><pre><code>&lt;div class=&quot;note info&quot;&gt;这里是 info 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note info no-icon&quot;&gt;这里是不带符号的 info 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note primary&quot;&gt;这里是 primary 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note primary no-icon&quot;&gt;这里是不带符号的 primary 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note warning&quot;&gt;这里是 warning 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note warning no-icon&quot;&gt;这里是不带符号的 warning 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note danger&quot;&gt;这里是 danger 标签样式&lt;/div&gt;
+
+&lt;div class=&quot;note danger no-icon&quot;&gt;这里是不带符号的 danger 标签样式&lt;/div&gt;
+</code></pre><p><strong>使用时用引入html，样例如下:（注意使用<font color="red">raw标签</font>）</strong></p>
+
+<div class="note info">这里是 info 标签样式</div>
+<div class="note info no-icon">这里是不带符号的 info 标签样式</div>
+<div class="note primary">这里是 primary 标签样式</div>
+<div class="note primary no-icon">这里是不带符号的 primary 标签样式</div>
+<div class="note warning">这里是 warning 标签样式</div>
+<div class="note warning no-icon">这里是不带符号的 warning 标签样式</div>
+<div class="note danger">这里是 danger 标签样式</div>
+<div class="note danger no-icon">这里是不带符号的 danger 标签样式</div>
+
+<h2 id="渐变标签使用方式"><a href="#渐变标签使用方式" class="headerlink" title="渐变标签使用方式"></a><strong>渐变标签使用方式</strong></h2><pre><code>&lt;div class=&#39;tip&#39;&gt;&lt;p&gt;&lt;font color=&quot;white&quot;&gt;默认情况&lt;/font&gt;&lt;p&gt;&lt;/div&gt;
+
+&lt;div class=&#39;tip success&#39;&gt;&lt;p&gt;&lt;font color=&quot;white&quot;&gt;success&lt;/font&gt;&lt;p&gt;&lt;/div&gt;
+
+&lt;div class=&#39;tip error&#39;&gt;&lt;p&gt;&lt;font color=&quot;white&quot;&gt;error&lt;/font&gt;&lt;p&gt;&lt;/div&gt;
+
+&lt;div class=&#39;tip warning&#39;&gt;&lt;p&gt;&lt;font color=&quot;white&quot;&gt;warning&lt;/font&gt;&lt;p&gt;&lt;/div&gt;
+
+</code></pre><p><strong>使用时用引入html，样例如下:（注意使用<font color="red">raw标签</font>）</strong><br>可以用<code>&lt;font color=&quot;#660000&quot; &gt;</code>来修改文字颜色<br>
+<div class="tip"><p><font color="white">默认情况</font></p><p></p></div>
+<div class="tip success"><p><font color="white">success</font></p><p></p></div>
+<div class="tip error"><p><font color="white">error</font></p><p></p></div>
+<div class="tip warning"><p><font color="white">warning</font></p><p></p></div>
+</p>
+
         </div>
-        <img width="150" height="150" src="http://qqpublic.qpic.cn/qq_public/0/0-2985801569-556254340F95B8D020FC517D4F7E3661/0?fmt=jpg&amp;size=71&amp;h=506&amp;w=900&amp;ppv=1/0" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/01/21/测试/">
-    测试</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-21</div>
-    <p>
-    【图文无关】仅测试标签显示是否正常</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/01/21/测试/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2021/01/21/测试/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://qqpublic.qpic.cn/qq_public/0/0-2985801569-556254340F95B8D020FC517D4F7E3661/0?fmt=jpg&size=71&h=506&w=900&ppv=1/0" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://qqpublic.qpic.cn/qq_public/0/0-2985801569-556254340F95B8D020FC517D4F7E3661/0?fmt=jpg&size=71&h=506&w=900&ppv=1/0">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                测试</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <style>
     .fuhao{
