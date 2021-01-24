@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rwl012.github.io/"/>
-  <updated>2021-01-24T13:59:58.076Z</updated>
+  <updated>2021-01-24T18:56:48.437Z</updated>
   <id>http://rwl012.github.io/</id>
   
   <author>
@@ -17,27 +17,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>寒蝉图集</title>
+    <link href="http://rwl012.github.io/2021/01/25/%E5%AF%92%E8%9D%89/"/>
+    <id>http://rwl012.github.io/2021/01/25/寒蝉/</id>
+    <published>2021-01-24T16:13:37.000Z</published>
+    <updated>2021-01-24T18:56:48.437Z</updated>
+    
+    <summary type="html">
+    
+      测试图片显示以及缩放功能是否正常
+    
+    </summary>
+    
+      <category term="动画" scheme="http://rwl012.github.io/categories/%E5%8A%A8%E7%94%BB/"/>
+    
+    
+      <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="寒蝉" scheme="http://rwl012.github.io/tags/%E5%AF%92%E8%9D%89/"/>
+    
+      <category term="图集" scheme="http://rwl012.github.io/tags/%E5%9B%BE%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown标签样式</title>
     <link href="http://rwl012.github.io/2021/01/24/Markdown%E6%A0%87%E7%AD%BE%E6%A0%B7%E5%BC%8F/"/>
     <id>http://rwl012.github.io/2021/01/24/Markdown标签样式/</id>
     <published>2021-01-24T13:14:28.000Z</published>
-    <updated>2021-01-24T13:59:58.076Z</updated>
+    <updated>2021-01-24T18:34:04.740Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;以下CSS样式均来自&lt;a href=&quot;https://bestzuo.cn/posts/halo-beauty.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Sanarous&lt;/a&gt;大佬的博客&lt;/p&gt;
-&lt;h2 id=&quot;常规标签使用方式&quot;&gt;&lt;a
-        
-      
+      关于Markdown中使用标签的Html代码
     
     </summary>
     
       <category term="技术" scheme="http://rwl012.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
+    
+      <category term="Markdown语法" scheme="http://rwl012.github.io/tags/Markdown%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="记录" scheme="http://rwl012.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="强调标签" scheme="http://rwl012.github.io/tags/%E5%BC%BA%E8%B0%83%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
