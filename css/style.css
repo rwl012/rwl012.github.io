@@ -1407,7 +1407,8 @@ a:hover,a:active {
 .gizle {
     top:-100px;
     top:0;
-    z-index:2015
+    z-index:1999;
+    margin: 0;
 }
 .site-header:hover {           /*鼠标放置顶端暗黑模式*/
     background-color:#fff
