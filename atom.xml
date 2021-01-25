@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rwl012.github.io/"/>
-  <updated>2021-01-25T06:01:18.721Z</updated>
+  <updated>2021-01-25T06:19:11.959Z</updated>
   <id>http://rwl012.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://rwl012.github.io/2021/01/25/%E5%AF%92%E8%9D%89/"/>
     <id>http://rwl012.github.io/2021/01/25/寒蝉/</id>
     <published>2021-01-24T16:13:37.000Z</published>
-    <updated>2021-01-25T06:01:18.721Z</updated>
+    <updated>2021-01-25T06:19:11.959Z</updated>
     
     <summary type="html">
     
@@ -45,7 +45,7 @@
     <link href="http://rwl012.github.io/2021/01/24/Markdown%E6%A0%87%E7%AD%BE%E6%A0%B7%E5%BC%8F/"/>
     <id>http://rwl012.github.io/2021/01/24/Markdown标签样式/</id>
     <published>2021-01-24T13:14:28.000Z</published>
-    <updated>2021-01-24T18:34:04.740Z</updated>
+    <updated>2021-01-25T07:53:23.130Z</updated>
     
     <summary type="html">
     
@@ -56,7 +56,7 @@
       <category term="技术" scheme="http://rwl012.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Markdown语法" scheme="http://rwl012.github.io/tags/Markdown%E8%AF%AD%E6%B3%95/"/>
+      <category term="Md语法" scheme="http://rwl012.github.io/tags/Md%E8%AF%AD%E6%B3%95/"/>
     
       <category term="记录" scheme="http://rwl012.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
     
@@ -93,13 +93,15 @@
     <link href="http://rwl012.github.io/2021/01/01/hello-world/"/>
     <id>http://rwl012.github.io/2021/01/01/hello-world/</id>
     <published>2021-01-01T08:19:29.331Z</published>
-    <updated>2021-01-24T07:48:43.865Z</updated>
+    <updated>2021-01-25T07:51:01.564Z</updated>
     
     <summary type="html">
     
       【图文无关】仅测试标签显示是否正常
     
     </summary>
+    
+      <category term="技术" scheme="http://rwl012.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
