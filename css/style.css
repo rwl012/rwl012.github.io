@@ -8660,7 +8660,7 @@ td.hljs-ln-numbers {
   .header-image {
     height: 70%;
     width: 100%;
-    background-image: url(/images/emoji/22-sikao.gif);
+    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -8700,7 +8700,7 @@ td.hljs-ln-numbers {
    
   .book__cover {
     height: 300px;
-    width: 250px;
+    width: 100%;
   }
   .book__content {
     text-align: justify;
@@ -8720,24 +8720,30 @@ td.hljs-ln-numbers {
   }
   .book {
     overflow: hidden;
-
-    /* background: white; */
+    background: white;
     height: 300px;
-    width: 250px;
-    box-shadow: 0 20px 30px -10px #ccc;
+    width: 100%;
+    box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
     /*transition: all 0.5s ease-in-out;*/
     transition: all 0.5s cubic-bezier(0.64, -0.19, 1, 1);
     border-radius: 25px;
+    float: left;
+    margin: 20 auto;
   }
+
   .book:hover {
     box-shadow: 0 6px 50px 10px #cfcfcf;
   }
   .book--expanded {
     height: 600px;
-    width: 50%;
+    width: 100%;
     overflow-y: scroll;
     background-color: rgb(243, 240, 240);
   }
+
+  .book-scroll::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
 
   .book--expanded .overlay {
     opacity: 0.95;
@@ -8746,10 +8752,10 @@ td.hljs-ln-numbers {
     color: #404040;
     font-size: 30px;
     letter-spacing: 0.05em;
-    width: 100%;
-    margin: 50% 0 40% 30%;
+    width: 50%;
+    margin: 14% 0 0 25%;
     line-height: 5;
-    background-color: rgba(250, 250, 250, 0.692);
+    background-color: rgba(250, 250, 250, 0.89);
     border-radius: 25px;
   }
   .book--expanded .title-wrap {
@@ -8761,6 +8767,7 @@ td.hljs-ln-numbers {
   }
   .book--expanded .book__cover {
     height: 460px;
+    width: 100%;
     margin-bottom: 6rem;
   }
   .book--expanded .book__content {
@@ -8768,25 +8775,36 @@ td.hljs-ln-numbers {
   }
   .book--expanded .header-image {
     height: 50%;
-    width: 160%;
+    width: 100%;
     transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
     background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
   }
-
+ 
   @media(max-width:860px){
     .book--expanded {
         height: 50%;
-        width: 80%;
+        width: 100%;
         overflow-y: scroll;
         background-color: rgb(243, 240, 240);
-        margin: auto;
+        margin: 20 auto;
       }
     ::-webkit-scrollbar { width: 0px;  }
     
     .book--expanded .header-image {
         height: 40%;
-        width: 120%;
+        width: 100%;
         transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
         background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
       }
+    
+      .book--expanded .article-title {
+        font-size: 2.5rem;
+        line-height: 1;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: center;
+        letter-spacing: 0.025em;
+        transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
+        margin:180 0 0 85 ;
+        padding: 5px;
   }
+

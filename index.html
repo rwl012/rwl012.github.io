@@ -416,7 +416,7 @@ body{
   <div class="deng">
       <div class="xian"></div>
       <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">喜 迎</div></div>
+          <div class="deng-b"><div class="deng-t">春 节 </div></div>
       </div>
       <div class="shui shui-a"></div>
       <div class="shui shui-b"></div>
@@ -428,7 +428,7 @@ body{
   <div class="deng">
       <div class="xian"></div>
       <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">元 旦</div></div>
+          <div class="deng-b"><div class="deng-t">快 乐</div></div>
       </div>
       <div class="shui shui-a"></div>
       <div class="shui shui-b"></div>
@@ -519,8 +519,11 @@ body{
   </div>
   
   <div class="note danger">博客目前还在建设，可能会存在bug</div> 
-  
-  <div class="book">
+
+  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;margin: 30 0 10;">
+    <i class="fa fa-id-card" aria-hidden="true"></i>
+    博客信息</h1>
+  <div class="book book-scroll">
     <div class="book__cover">
       <div class="header-image"><div class="overlay"></div>   </div>
       <div class="title-wrap">
@@ -536,8 +539,6 @@ body{
         <p>输入内容</p>
   </div>
   </div>
- 
-  
 
   <div class="top-feature-row">
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
@@ -895,8 +896,13 @@ function switchNightMode() {
 
   $('.book').on('click', function () {
     $(this).toggleClass('book--expanded');
+    $('.booka').toggleClass('kieru')
   });
-     
+
+  $('.booka').on('click', function () {
+    $(this).toggleClass('book--expanded');
+    $('.book').toggleClass('kieru')
+  });
  </script>
 
     </div>    
