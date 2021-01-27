@@ -1763,7 +1763,8 @@ a:hover,a:active {
     border-radius:50%;
     padding:2px;
     border:1px solid #dadada;
-    position:relative
+    position:relative;
+    object-fit: cover;
 }
 .feature :hover .overlay i {
     opacity:1
@@ -8753,8 +8754,9 @@ td.hljs-ln-numbers {
     font-size: 30px;
     letter-spacing: 0.05em;
     width: 50%;
-    margin: 14% 0 0 25%;
-    line-height: 5;
+    height: 50;
+    margin: 18% 0 0 25%;
+    line-height: 1.7;
     background-color: rgba(250, 250, 250, 0.89);
     border-radius: 25px;
   }
@@ -8781,30 +8783,59 @@ td.hljs-ln-numbers {
   }
  
   @media(max-width:860px){
+    .article-title {
+        font-size: 15px;
+      }
+
+    .book {
+        overflow: hidden;
+        background: white;
+        height: 300px;
+        width: 80%;
+        box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
+        /*transition: all 0.5s ease-in-out;*/
+        transition: all 0.5s cubic-bezier(0.64, -0.19, 1, 1);
+        border-radius: 25px;
+        float: left;
+        margin: 16px 10% 35px 10%;
+      }
+
     .book--expanded {
         height: 50%;
-        width: 100%;
+        width: 80%;
         overflow-y: scroll;
         background-color: rgb(243, 240, 240);
-        margin: 20 auto;
+        margin: 16px 10% 35px 10%;
       }
     ::-webkit-scrollbar { width: 0px;  }
     
+    .book--expanded .book__cover {
+        height: 32%;
+        width: 100%;
+        margin-bottom: 6rem;
+      }
     .book--expanded .header-image {
-        height: 40%;
+        height: 100%;
         width: 100%;
         transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
         background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
       }
     
       .book--expanded .article-title {
-        font-size: 2.5rem;
+        font-size: 18px;
+        height: 30px;
         line-height: 1;
         font-family: 'Roboto Condensed', sans-serif;
         text-align: center;
         letter-spacing: 0.025em;
         transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
-        margin:180 0 0 85 ;
+        margin:190 0 0 75 ;
         padding: 5px;
+      }
+        .book--expanded {
+    height: 600px;
+    width: 80%;
+    overflow-y: scroll;
+    background-color: rgb(243, 240, 240);
   }
-
+}
