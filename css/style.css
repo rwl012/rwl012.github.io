@@ -6846,7 +6846,7 @@ progress {
     list-style:none
 }
 #archives li>ul,li>ol {
-    margin-left:-2.7em
+    margin-left:0em
 }
 #archives h3 {
     margin-top:0;
@@ -8404,7 +8404,7 @@ td.hljs-ln-numbers {
         background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed)
     }
 
-    .DarkMode .Cuteen_DarkSky:before {
+    .night .Cuteen_DarkSky:before {
         opacity: 1
     }
 
@@ -8703,6 +8703,7 @@ td.hljs-ln-numbers {
     height: 300px;
     width: 100%;
   }
+  
   .book__content {
     text-align: justify;
     word-wrap: break-word;
@@ -8733,7 +8734,7 @@ td.hljs-ln-numbers {
   }
 
   .book:hover {
-    box-shadow: 0 6px 50px 10px #cfcfcf;
+    box-shadow: 0 5px 10px 5px rgba(110,110,110,.4);
   }
   .book--expanded {
     height: 600px;

@@ -388,7 +388,7 @@ margin-left: 200px;
   <p class='topbangumi '><img class="pic_bangumi" src="/images/bangumi/xiaopaimenggai.png"><p class="topbangumi"><img src="/images/bangumi/huangguan.svg" style="width: 30px;height: 30px;">极力推荐 TOP</p>
   
   <div class="carousel-wrapper carousel-large">
-    <div class="carou-images" id="psg">
+    <div class="carou-images">
       <ul id="moving" class="carou-images-wrapper clearfix" style="transform: translateX(-6%); transition-duration: 0.3s;margin: 0;">
         <li class="chief-recom-item"><a href="https://www.bilibili.com/bangumi/play/ep377462" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/illust_78937093_20200620_013413.png" alt="你们买菜都开奥迪和兰博基尼？"></a></li>
@@ -403,8 +403,8 @@ margin-left: 200px;
       </ul>
     </div>   
     
-  <div class="carou-bottom-shadow" id="stopandkeepgoing">
-    <div class="carou-info" style="width: 608px;" id="fontchange">
+  <div class="carou-bottom-shadow">
+    <div class="carou-info" style="width: 608px;" id="fontchange" >
       <span style=" "><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">你们买菜都开奥迪和兰博基尼？</a></span>
       <span style="display: none;"><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">楚汉之争即将打响</a></span>
       <span style="display: none"><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">好莱坞女神来了！</a></span>
@@ -412,25 +412,25 @@ margin-left: 200px;
       <span style="display: none"><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">化学课又来了</a></span>
     </div> 
     
-    <div class="carou-mini" id="stopandkeepgoing">
+    <div class="carou-mini" id="psg">
       <a id="minichange" href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank" class="thumb-cursor" style="left: 0px; transition-duration: 0.3s;"></a> 
-        <div class="chief-thumb-item" data-index="0"><a href="https://www.bilibili.com/bangumi/play/ep377462" target="_blank">
+        <div class="chief-thumb-item" data-index="0" onmouseover="changebtn(0)"><a href="https://www.bilibili.com/bangumi/play/ep377462" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/illust_78937093_20200620_013413.png" alt="你们买菜都开奥迪和兰博基尼？"></a>
         </div>
 
-        <div class="chief-thumb-item" data-index="1"><a href="https://www.bilibili.com/bangumi/play/ss34199" target="_blank">
+        <div class="chief-thumb-item" data-index="1" onmouseover="changebtn(1)"><a href="https://www.bilibili.com/bangumi/play/ss34199" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg" alt="楚汉之争即将打响"></a>
         </div>
 
-        <div class="chief-thumb-item" data-index="2"><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">
+        <div class="chief-thumb-item" data-index="2" onmouseover="changebtn(2)"><a href="https://www.bilibili.com/bangumi/play/ep378346" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/mmexport1593870321443.png" alt="好莱坞女神来了！"></a>
         </div>
 
-        <div class="chief-thumb-item" data-index="3"><a href="https://www.bilibili.com/bangumi/play/ep377630" target="_blank">
+        <div class="chief-thumb-item" data-index="3" onmouseover="changebtn(3)"><a href="https://www.bilibili.com/bangumi/play/ep377630" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/mmexport1602230323564.jpg" alt="当场豹毙！"></a>
         </div>
 
-        <div class="chief-thumb-item" data-index="4"><a href="https://www.bilibili.com/bangumi/play/ep379153" target="_blank">
+        <div class="chief-thumb-item" data-index="4" onmouseover="changebtn(4)"><a href="https://www.bilibili.com/bangumi/play/ep379153" target="_blank">
           <img src="https://cdn.jsdelivr.net/gh/rwl012/PicGo/mmexport1602230325934.jpg" alt="化学课又来了"></a>
         </div>
       </div>
@@ -691,54 +691,68 @@ margin-left: 200px;
   </article>
 </body>
 </div>
-
+<script type="text/javascript" src="/js/darkmode.min.js"></script>
 <script>
-  var ofontchange = document.getElementById('fontchange');
-  var left = 0
-  var opsg = document.getElementById('psg')
-  var ofontchanges = ofontchange.getElementsByTagName('span');
-  var num = 0;
-  var len = ofontchanges.length; 
-  var moving = -6 ;
-
-
   //自动播放
   function autoplay(){
-  timer = setInterval( function(){
-      num = num + 1;
-      left = left + 72;
-      moving = moving - 106;
-      
-      if ( num > 4 ){ 
-        num = 0;
-      }
-      if ( left > 288 ){ 
-        left = 0;}
+      var ofontchange = document.getElementById('fontchange');
+      var left = 0
+      var opsg = document.getElementById('psg')
+      var ofontchanges = ofontchange.getElementsByTagName('span');
+      var num = 0;
+      var len = ofontchanges.length; 
+      var moving = -6 ;
 
-      if (moving >-430){ document.getElementById('moving').style.transition="transform .3s ease";}
-      if (moving < -430 ){ moving = -6;document.getElementById('moving').style.transition="none";}
+      timer = setInterval( function(){
+          num = num + 1;
+          left = left + 72;
+          moving = moving - 106;
 
-      for(var i=0; i<len;i++){
-        ofontchanges[i].style= "display:none" ;
-        document.getElementById('minichange').style.left = left + 'px';
-        document.getElementById('moving').style.transform='translateX(' + moving + '%)';
-      }
-      ofontchanges[num].style= " " ;
-      document.getElementById('minichange').style.left = left + 'px';
-      document.getElementById('moving').style.transform='translateX(' + moving + '%)';
-    },2000);
+          if ( num > 4 ){ 
+            num = 0;
+          }
+          if ( left > 288 ){ 
+            left = 0;}
+
+          if (moving >-430){ document.getElementById('moving').style.transition="transform .3s ease";}
+
+          if (moving < -430 ){ moving = -6;document.getElementById('moving').style.transition="none";}
+
+          for(var i=0; i<len;i++){
+            ofontchanges[i].style= "display:none" ;
+            document.getElementById('minichange').style.left = left + 'px';
+            document.getElementById('moving').style.transform='translateX(' + moving + '%)';
+          }
+          ofontchanges[num].style= " " ;
+          document.getElementById('minichange').style.left = left + 'px';
+          document.getElementById('moving').style.transform='translateX(' + moving + '%)';
+        },3000);
   }
   autoplay();
-
-    //鼠标悬浮自动停止
-    opsg.onmouseover = function(){
-      clearInterval(timer);
-  }
+  
     //鼠标离开继续
-    opsg.onmouseout = function(){
-      autoplay();
-  }
+   psg.onmouseover= function(){
+    clearInterval(timer);
+   }
+   psg.onmouseout= function(){autoplay();}
 
+
+  function changebtn(n){
+
+      var left = 72;
+      var moving = -6;
+      var ofontchange = document.getElementById('fontchange');
+      var ofontchanges = ofontchange.getElementsByTagName('span');
+      for(a=0;a < ofontchanges.length;a++){
+        ofontchanges[a].style= "display:none" ;
+      clearInterval(timer);
+      }
+      ofontchanges[n].style= " ";
+      document.getElementById('minichange').style.left = n*left + 'px';
+      b = moving-106*n
+      document.getElementById('moving').style.transform='translateX(' + b + '%)';
+
+   }
 </script>
     </div>    
     <style>

@@ -838,7 +838,20 @@ body{
 </div>
 </div>
 
+<script type="text/javascript" src="/js/darkmode.min.js"></script>
 <script>
+  "use strict";
+
+  $('.book').on('click', function () {
+    $(this).toggleClass('book--expanded');
+    $('.booka').toggleClass('kieru')
+  });
+
+  $('.booka').on('click', function () {
+    $(this).toggleClass('book--expanded');
+    $('.book').toggleClass('kieru')
+  });
+
 //点击按钮后切换模式
 function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
@@ -847,7 +860,7 @@ function switchNightMode() {
                     '0';
                 (DarkMode == '0') ? ($("body").addClass("night"), document.cookie = "DarkMode=1;path=/", $('#nightMode').removeClass("fa-moon-o").addClass("fa-circle")) : ($("body").removeClass(
                         "night"), document.cookie = "DarkMode=0;path=/", $('#nightMode').removeClass("fa-circle").addClass("fa-moon-o")), setTimeout(function () {
-                    $(".Cuteen_DarkSky").fadeOut(1e3, function () {
+                    $(".Cuteen_DarkSky").fadeOut(100, function () {
                         $(this).remove()
                     })
                 }, 2e3)
@@ -888,23 +901,8 @@ function switchNightMode() {
             }
         }
     }
-    checkNightMode();
+  checkNightMode();
   </script>
-<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
-<script>
-  "use strict";
-
-  $('.book').on('click', function () {
-    $(this).toggleClass('book--expanded');
-    $('.booka').toggleClass('kieru')
-  });
-
-  $('.booka').on('click', function () {
-    $(this).toggleClass('book--expanded');
-    $('.book').toggleClass('kieru')
-  });
- </script>
-
     </div>    
     <style>
     .fuhao{
