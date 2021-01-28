@@ -2412,7 +2412,7 @@ h1.page-title.mb- {
     display:none;
     position:fixed;
     bottom:10px;
-    right:10px;
+    right:5px;
     z-index:97;
     border:0;
     outline:0;
@@ -8332,7 +8332,10 @@ td.hljs-ln-numbers {
         color: white;
         border:1px dashed #e6e6e6
     }
-
+    .night .note.danger {
+        background-color: #6f2229;
+        border-left-color: #b31f1b;
+    }
     .night .header-info {
         background:rgba(212, 208, 208, 0.274); 
         color: #eaeadf}
@@ -8515,6 +8518,14 @@ td.hljs-ln-numbers {
 .note.danger:not(.no-icon):before {
     content: "\f056";
     color: #d9534f;
+}
+
+@media （prefers-color-scheme：dark）{
+    .note.danger {
+        background-color: #6f2229;
+        border-left-color: #b31f1b;
+    }
+
 }
 
 /*渐变标签*/
@@ -8732,7 +8743,9 @@ td.hljs-ln-numbers {
     float: left;
     margin: 20 auto;
   }
-
+  .night .book{
+    background: #333333;
+  }
   .book:hover {
     box-shadow: 0 5px 10px 5px rgba(110,110,110,.4);
   }

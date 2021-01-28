@@ -58,7 +58,7 @@
   <link rel="stylesheet" href="/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-
+  <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
 <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
@@ -761,7 +761,7 @@ links:
 <script type="text/javascript" src="/js/zoompic.js"></script>
 <script type="text/javascript" src="/js/darkmode.min.js"></script>
 
-
+<script type="text/javascript" src="/js/flashdark.min.js"></script>
 <script>
     if (document.getElementById('zoompic')) {
     new Viewer(document.getElementById('zoompic'), {
@@ -972,7 +972,7 @@ $(document).ready(function() {
     margin-bottom: 0px;
     transition: margin-bottom 2s;
     bottom:10px;
-    right:10px;
+    right:5px;
     z-index:99;
     border:0;
     outline:0;
@@ -1001,7 +1001,7 @@ $(document).ready(function() {
     margin-bottom: 0px;
     transition: margin-bottom 2s;
     bottom:10px;
-    right:10px;
+    right:5px;
     z-index:98;
     border:0;
     outline:0;
@@ -1156,7 +1156,7 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021 asanomiki </p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-<button onclick="switchNightMode()" id="qiehuanqian"  title="切换深色模式" ><i class="fa fa-moon-o" id="nightMode" aria-hidden="false" style="font-size: 14px;color: rgb(255, 208, 0);"></i></button>
+<button onclick="switchNightMode()" id="qiehuanqian"  title="切换深色模式" ><i  id="nightMode" class="fa fa-moon-o"aria-hidden="false" style="font-size: 14px;color: rgb(255, 208, 0);"></i></button>
 <button  class="iconflata" id="qiehuanqian1"  title="" ><i class="fa fa-bars" id="nightMode" aria-hidden="false" style="font-size: 14px;color: rgb(64,64,64);"></i></button>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>

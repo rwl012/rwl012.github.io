@@ -58,7 +58,7 @@
   <link rel="stylesheet" href="/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-
+  <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
 <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
@@ -409,7 +409,7 @@ body{
 }
 </style>
 
-
+<script type="text/javascript" src="/js/darkmode.min.js"></script>
 
  <!-- 灯笼 1 -->
  <div class="deng-box">
@@ -643,6 +643,7 @@ body{
     </div>
   </div>
 </article>
+
   
     <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_qpx5al8zow.css">
 
@@ -689,6 +690,7 @@ body{
     </div>
   </div>
 </article>
+
   
     <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_qpx5al8zow.css">
 
@@ -735,6 +737,7 @@ body{
     </div>
   </div>
 </article>
+
   
     <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_qpx5al8zow.css">
 
@@ -781,6 +784,7 @@ body{
     </div>
   </div>
 </article>
+
   
     <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_qpx5al8zow.css">
 
@@ -827,6 +831,7 @@ body{
     </div>
   </div>
 </article>
+
   
 
 
@@ -838,7 +843,7 @@ body{
 </div>
 </div>
 
-<script type="text/javascript" src="/js/darkmode.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
 <script>
   "use strict";
 
@@ -851,57 +856,48 @@ body{
     $(this).toggleClass('book--expanded');
     $('.book').toggleClass('kieru')
   });
-
+  
 //点击按钮后切换模式
 function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
             function () {
                 var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") ||
                     '0';
-                (DarkMode == '0') ? ($("body").addClass("night"), document.cookie = "DarkMode=1;path=/", $('#nightMode').removeClass("fa-moon-o").addClass("fa-circle")) : ($("body").removeClass(
-                        "night"), document.cookie = "DarkMode=0;path=/", $('#nightMode').removeClass("fa-circle").addClass("fa-moon-o")), setTimeout(function () {
+                (DarkMode == '0') ? ($("body").addClass("night"), document.cookie = "DarkMode=1;path=/", $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o")) : ($("body").removeClass(
+                        "night"), document.cookie = "DarkMode=0;path=/", $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o")), setTimeout(function () {
                     $(".Cuteen_DarkSky").fadeOut(100, function () {
                         $(this).remove()
                     })
                 }, 2e3)
             }), 50
+            console.log('成功执行2333')
     }
     
     //检查当前主题模式和图标是否对应
     function checkNightMode() {
         if ($("body").hasClass("night")) {
-            $('#nightMode').removeClass("fa-moon-o").addClass("fa-circle");
+            $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
             return;
         }else{
-            $('#nightMode').removeClass("fa-circle").addClass("fa-moon-o");
+            $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
             return;
         }
-        
-        //如果没有切换过，从 cookie 中获取标志位判断
-        if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-            if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
-                $("body").addClass("night");
-                document.cookie = "DarkMode=1;path=/";
-                console.log('夜间模式开启');
-                $('#nightMode').removeClass("fa-moon-o").addClass("fa-circle");
-            } else {
-                $("body").removeClass("night");
-                document.cookie = "DarkMode=0;path=/";
-                console.log('夜间模式关闭');
-                $('#nightMode').removeClass("fa-circle").addClass("fa-moon-o");
-            }
-        } else {
-            var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-            if (DarkMode == '0') {
-                $("body").removeClass("night");
-                 $('#nightMode').removeClass("fa-circle").addClass("fa-moon-o");
-            } else if (DarkMode == '1') {
-                $("body").addClass("night");
-                $('#nightMode').removeClass("fa-moon-o").addClass("fa-circle");
-            }
-        }
-    }
+}
+
   checkNightMode();
+
+          
+    //如果没有切换过，从 cookie 中获取标志位判断
+
+    var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if (DarkMode == '0') {
+            $("body").removeClass("night");
+             $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+        } else if (DarkMode == '1') {
+            $("body").addClass("night");
+            $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+        }
+    
   </script>
     </div>    
     <style>
@@ -1104,7 +1100,7 @@ $(document).ready(function() {
     margin-bottom: 0px;
     transition: margin-bottom 2s;
     bottom:10px;
-    right:10px;
+    right:5px;
     z-index:99;
     border:0;
     outline:0;
@@ -1133,7 +1129,7 @@ $(document).ready(function() {
     margin-bottom: 0px;
     transition: margin-bottom 2s;
     bottom:10px;
-    right:10px;
+    right:5px;
     z-index:98;
     border:0;
     outline:0;
@@ -1288,7 +1284,7 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021 asanomiki </p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-<button onclick="switchNightMode()" id="qiehuanqian"  title="切换深色模式" ><i class="fa fa-moon-o" id="nightMode" aria-hidden="false" style="font-size: 14px;color: rgb(255, 208, 0);"></i></button>
+<button onclick="switchNightMode()" id="qiehuanqian"  title="切换深色模式" ><i  id="nightMode" class="fa fa-moon-o"aria-hidden="false" style="font-size: 14px;color: rgb(255, 208, 0);"></i></button>
 <button  class="iconflata" id="qiehuanqian1"  title="" ><i class="fa fa-bars" id="nightMode" aria-hidden="false" style="font-size: 14px;color: rgb(64,64,64);"></i></button>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
