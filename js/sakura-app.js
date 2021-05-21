@@ -45,21 +45,21 @@ mashiro_global.ini = new function () {
     }
     $(function () {
       function waveloop1 () {
-        $('#banner_wave_1').css({
+        $('#wave1').css({
           'left': '-236px'
         }).animate({
           'left': '-1233px'
         }, 25000, 'linear', waveloop1)
       }
-
+//波纹
       function waveloop2 () {
-        $('#banner_wave_2').css({
+        $('#wave2').css({
           'left': '0px'
         }).animate({
           'left': '-1009px'
         }, 60000, 'linear', waveloop2)
       }
-      if (screen && screen.width > 860) {
+      if (screen && screen.width < 860) {
         waveloop1()
         waveloop2()
       }
@@ -180,10 +180,10 @@ function imgError (ele, type) {
       break
     case 3:
 
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+      ele.src = 'https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.8/img/other/image-404.png'
       break
     default:
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+      ele.src = 'https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.8/img/other/image-404.png'
   }
 }
 mashiro_global.post_list_show_animation = new function () {

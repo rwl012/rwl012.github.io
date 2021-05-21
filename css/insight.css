@@ -80,8 +80,8 @@
   .ins-search-container {
     top: 0;
     right: 0% !important;
-    margin: 0 !important;
-    width: 100% !important;
+    margin: 10 !important;
+    width: 95% !important;
     height: 80%;
     background: #f7f7f7;
   }

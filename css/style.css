@@ -1558,7 +1558,7 @@ a:hover,a:active {
     position:absolute;
     bottom:-16px;
     height:6px;
-    background-color:#fe9600;     /*固定栏超链接颜色【弹出前线条】*/
+    background-color:#afabd0;     /*固定栏超链接颜色【弹出前线条】*/
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
@@ -1569,14 +1569,14 @@ a:hover,a:active {
     position:absolute;
     bottom:-21px;
     height:6px;
-    background-color:#fe9600;
+    background-color:#afabd0;
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
 }
 .site-top ul li a:hover:after {
     max-width:100%;
-    background-color:#fe9600   /*固定栏超链接颜色【弹出后线条】*/
+    background-color:#afabd0   /*固定栏超链接颜色【弹出后线条】*/
 }
 #show-nav {
     position:relative;
@@ -2372,7 +2372,7 @@ h1.page-title.mb- {
     z-index:99;
     width:70px;
     height:900px;
-    background:url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/scroll-nian.png) no-repeat center;
+    background:url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/scroll2.png) no-repeat center;
     background-size:contain;
     -webkit-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
@@ -4021,10 +4021,11 @@ li.feature-2 {
     display:initial;
     vertical-align:middle
 }
+
 .headertop {
     position:relative;
     overflow:hidden;
-    height:0
+    height:0;
 }
 @media(max-width:860px) {
     .notice {
@@ -4035,8 +4036,9 @@ li.feature-2 {
     .headertop {
         position:relative;
         overflow:visible;
-        height:0
+        height:0;
     }
+
     .video-stu {
         display: none;
     }
@@ -4118,7 +4120,7 @@ li.feature-2 {
 }
 @media(max-width:860px) {
     #centerbg {
-        height:300px;
+        height:200px;
         background-attachment:scroll
     }
     .focusinfo .header-tou img {
@@ -4262,7 +4264,7 @@ li.feature-2 {
     color:#eaeadf;
     background:rgba(165, 160, 160, 0.363);
     padding:15px;
-    margin-top:20px;
+    margin-top:30px;
     letter-spacing:0;
     line-height:30px;
     border-radius:10px;
@@ -5181,7 +5183,7 @@ i.iconfont.js-toggle-search.iconsearch {
     max-width:250px;
     height:auto;
     margin:0 auto;
-    padding:30px 0 20px;
+    padding:90px 0 10px;
     text-align:center
 }
 #mo-nav .m-avatar img {
@@ -5245,7 +5247,7 @@ i.iconfont.js-toggle-search.iconsearch {
   }
   
 @media (prefers-color-scheme: light) {
-    #mo-nav li ul li a {color: #9cacc5;}
+    #mo-nav li ul li a {color: #afabd0;}
   
   }
 
@@ -6057,11 +6059,11 @@ button.botui-actions-buttons-button {
   }
 
 .logolink a:hover .sakurasono {
-    background-color:orange;   /* 左上角miki hover颜色更改*/
+    background-color:#afabd0;   /* 左上角miki hover颜色更改*/
     color:#fff
 }
 .logolink a:hover .shironeko,.logolink a:hover rt {                
-    color:orange              /*左上角blog hover颜色更改*/
+    color: #afabd0             /*左上角blog hover颜色更改*/
 }
 .logolink.moe-mashiro a {            /*logo字体颜色*/
     color:#464646;
@@ -7893,7 +7895,7 @@ img[src*="#in-center"] {
     margin-right:auto;
     display:block
 }
-#banner_wave_1 {
+/*#banner_wave_1 {
     width:auto;
     height:65px;
     background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave1.png") repeat-x;
@@ -7905,8 +7907,36 @@ img[src*="#in-center"] {
     opacity:1;
     transition-property:opacity,bottom;
     transition-duration:.4s,.4s
+}*/
+#wave1 {
+    width:auto;
+    height:30px;
+    background:url("/images/cover/wave1.png") repeat-x;
+    position:relative;
+    margin-top: -29px;
+    bottom:0;
+    width:400%;
+    left:-236px;
+    z-index:5;
+    opacity:1;
+    transition-property:opacity,bottom;
+    transition-duration:.4s,.4s
 }
-#banner_wave_2 {
+#wave2 {
+    width:auto;
+    height:30px;
+    background:url("/images/cover/wave2.png") repeat-x;
+    position:relative;
+    margin-top: -29px;
+    bottom:0;
+    width:400%;
+    left:0;
+    z-index:4;
+    opacity:1;
+    transition-property:opacity,bottom;
+    transition-duration:.4s,.4s
+}
+/*#banner_wave_2 {
     width:auto;
     height:80px;
     background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave2.png") repeat-x;
@@ -7918,7 +7948,7 @@ img[src*="#in-center"] {
     opacity:1;
     transition-property:opacity,bottom;
     transition-duration:.4s,.4s
-}
+}*/
 .banner_wave_hide,.banner_wave_hide_fit_skin {
     opacity:0 !important;
     bottom:-999px !important
