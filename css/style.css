@@ -949,7 +949,7 @@ hr {
     margin-bottom:1.5em
 }
 ul,ol {
-    margin:0 0 1.5em 3em
+    margin:0 0 0 3em
 }
 ul {
     list-style:disc
@@ -5073,10 +5073,12 @@ h3#comments-list-title,nav#comments-navi {
   }
 
 #mo-nav.open {
-    width:250px;
+    width:350px;
+    height: 800px;
     transition:all .3s ease;
     background-image: url(/images/movie/ba.png);
-    background-size: 110% 100%;
+    background-size: 100% 90%;
+    background-attachment:scroll;
 }
 .wrapper section {
     /*max-width:600px*/
@@ -7924,10 +7926,10 @@ img[src*="#in-center"] {
 }
 #wave2 {
     width:auto;
-    height:30px;
+    height:80px;
     background:url("/images/cover/wave2.png") repeat-x;
     position:relative;
-    margin-top: -29px;
+    margin-top: -79px;
     bottom:0;
     width:400%;
     left:0;

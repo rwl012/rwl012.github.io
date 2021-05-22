@@ -49,7 +49,7 @@ mashiro_global.ini = new function () {
           'left': '-236px'
         }).animate({
           'left': '-1233px'
-        }, 25000, 'linear', waveloop1)
+        }, 50000, 'linear', waveloop1)
       }
 //波纹
       function waveloop2 () {
@@ -59,7 +59,7 @@ mashiro_global.ini = new function () {
           'left': '-1009px'
         }, 60000, 'linear', waveloop2)
       }
-      if (screen && screen.width < 860) {
+      if (screen && screen.width > 860) {
         waveloop1()
         waveloop2()
       }
