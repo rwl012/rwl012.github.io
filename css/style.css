@@ -1702,7 +1702,7 @@ a:hover,a:active {
     padding:30px 0 0
 }
 .site-content {
-    max-width:800px;
+    max-width:850px;
     padding:0 10px;
     margin-left:auto;
     margin-right:auto;
@@ -3904,7 +3904,7 @@ a.page-numbers {
     font-weight:400;
     padding-bottom:5px;
     margin-bottom:30px;
-    border-bottom:1px dashed #ececec
+    border-bottom:1px dashed #c7c2c2
 }
 /*发现、startdash字体暗黑模式设置1*/
 @media (prefers-color-scheme: dark) {
@@ -3991,23 +3991,23 @@ li.feature-2 {
     transform:translateY(0)
 }
 .notice {                            /*公告栏暗黑模式*/
-    padding:20px;
-    border:1px dashed #e6e6e6;
+    padding:20px;   
     color:#969696;
     position:relative;
     display:inline-block;
     width:100%;
     background:#fbfbfb50;
-    border-radius:10px
+    border-radius:10px;
+    background-image: linear-gradient(170deg,#f1f6ff 0%,#b4b9bd 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-    .notice {background:  rgba(51, 51, 51, 0.164); color: white;border:1px dashed #e6e6e6}
+    .notice {background-image: linear-gradient(170deg,#f1f6ff 0%,#b4b9bd 100%); color: white;}
     
   }
   
   @media (prefers-color-scheme: light) {
-    .notice {background: #fbfbfb2c; color: #464646;border:1px dashed #464646}
+    .notice {background-image: linear-gradient(170deg,#f1f6ff 0%,#b4b9bd 100%); color: #464646;}
   
   }
 
@@ -4102,17 +4102,32 @@ li.feature-2 {
     -webkit-transform:scale(1.5,1);
     transform:scale(1.5,1)
 }
+
+.bgmob {              
+    width:100%;
+    margin:0;
+    padding:0;
+    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/5d114977b9e30441f11fc5a5c1011dda64f458ba.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    z-index:-1;
+    height:200px;
+    background-attachment:scroll
+}
+
 /*背景图片样式*/
 #centerbg {              
     width:100%;
-    height:550px;
+    height:350px;
     margin:0;
     padding:0;
+    background-image: url();
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
     z-index:-1
 }
+
 @media(max-width:560px) {
     #bgvideo {
         min-height: 280px !important;
@@ -4269,18 +4284,132 @@ li.feature-2 {
     line-height:30px;
     border-radius:10px;
     box-sizing:initial;
-    white-space:nowrap
+    white-space:nowrap;
+    display: none
+}
+
+.header-infopc1 {
+    width:300px;       /*社交栏宽度*/
+    height: 110px;
+    margin:0 20 0 0px;
+    font-size:16px;
+    font-weight: bold;
+    color:#ffffff;
+    background-image: url(/images/cover/meiri.png);
+    padding:15px;
+    margin-top:30px;
+    letter-spacing:0;
+    line-height:30px;
+    border-radius:10px;
+    box-sizing:initial;
+    white-space:nowrap;
+    float: left;
+}
+.header-infopc2 {
+    width:450px;       /*社交栏宽度*/
+    height: 110px;
+    margin:auto;
+    font-size:16px;
+    color:#eaeadf;
+    background:rgba(165, 160, 160, 0.363);
+    padding:15px;
+    margin-top:30px;
+    letter-spacing:0;
+    line-height:30px;
+    border-radius:10px;
+    box-sizing:initial;
+    white-space:nowrap;
+    float: left;
+}
+
+.avatar {
+    position:relative;
+    width:105px;
+    max-width:250px;
+    height:auto;
+    float: left;
+}
+.avatar img {
+    width:90px;
+    height:90px;
+    max-width:90px;
+    border-radius:25%
+}
+.pcsocial {  
+    height:32px;
+    width: 80%;
+    margin:auto;
+    margin-left: calc(38% - 50px);  /*社交栏宽度设置2*/
+    list-style:none;
+    display:inline-block
+}
+.pcsocial {  
+    height:32px;
+    width: 300px;
+    margin:auto;
+    margin-left: calc(34% - 50px);  /*社交栏宽度设置2*/
+    list-style:none;
+    display:inline-block
+}
+.pcsocial img {
+    height:35px;
+    width:35px;
+    padding:6px;
+    background:transparent
+}
+.pcsocial li {
+    float:left;
+    margin-right:13px
+}
+.aboutme{
+    width:160px;
+    height: 40px;
+    background-image:linear-gradient(170deg,#f3d55d 0%,#ecc21b 100%);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+.aboutme1{
+    width:160px;
+    height: 40px;
+    background-image:linear-gradient(45deg, #3fa86b 0%, #166e3b 100%);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+.aboutme2{
+    width:330px;
+    height: 60px;
+    background-image:linear-gradient(170deg,#152c58 0%,#0092ff 100%);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 56px;
+    float: left;
+    margin-right: 5px;
+
 }
 /*社交栏暗黑模式*/
 @media (prefers-color-scheme: dark) {
     .header-info {background:rgba(212, 208, 208, 0.274); color: #eaeadf; /*border:1px dashed #eaeadf;*/}
-    
+    .aboutme2{}
   }
   
   @media(prefers-color-scheme: light) {
     .header-info {background: rgba(121, 118, 118, 0.096);  color:#464646;/* border:1px dashed #464646;*/}  
   }
-
+  @media(max-width: 850px) {
+    .header-info {display: block;}  
+  }
+  @media(max-width: 850px) {
+    .header-infopc1 {display: none;}
+    .header-infopc2 {display: none;}
+  }
 /*.header-info:before {
     content:"";
     position:absolute;
@@ -7453,11 +7582,13 @@ to {
 }
 .the-feature.from_left_and_right {
     position:relative;
-    height:160px;
+    height:100px;
     width:257px;
+    background-color: white;
     box-shadow:1px 1px 3px rgba(0,0,0,.3);
     overflow:hidden;
-    border-radius:10px
+    border-radius:10px;
+    margin-left: 13px;
 }
 .the-feature.from_left_and_right .img {
     -webkit-transition:all .35s ease-in-out;
@@ -7492,7 +7623,7 @@ to {
     text-align:center;
     font-size:17px;
     padding:10px;
-    background:#111;
+    background-image:linear-gradient( to right, #70c25c 0%, #70c25c 22%, #ffc04a 22%, #ffc04a 37.6%, #fc903d 37.6%, #fc903d 53.2%, #e94752 53.2%, #e94752 68.8%, #a954a5 68.8%, #a954a5 84.4%, #00afe0 84.4%, #00afe0 100%);
     margin:30px 0 0 0;
     -webkit-transition:all .35s ease-in-out;
     -moz-transition:all .35s ease-in-out;
@@ -8492,7 +8623,7 @@ td.hljs-ln-numbers {
 .note {
     position: relative;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border: initial;
     border-left: 3px solid #eee;
@@ -8544,13 +8675,16 @@ td.hljs-ln-numbers {
 }
 
 .note.danger {
-    background-color: #fcf1f2;
+    /*background-color: #fcf1f2;*/
+    background-image:linear-gradient(170deg,#fcf1f2 0%,#f1bdc1 100%);
     border-left-color: #d9534f;
 }
 
 .note.danger:not(.no-icon):before {
     content: "\f056";
     color: #d9534f;
+    font-size: 20px;
+    margin-top: 8px;
 }
 
 @media （prefers-color-scheme：dark）{
@@ -8679,210 +8813,3 @@ td.hljs-ln-numbers {
   color: #4c4948;
 }
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-   
-  }
-  
-  .mr2 {
-    margin-right: 1rem;
-  }
-  .ml2 {
-    margin-left: 1rem;
-  }
-  .article-title {
-    font-size: 2.5rem;
-    line-height: 1;
-   font-family: 'Roboto Condensed', sans-serif;
-    text-align: center;
-    letter-spacing: 0.025em;
-    transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
-    margin:10 0 10 0 ;
-  }
-  .header-image {
-    height: 70%;
-    width: 100%;
-    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    /*transition: all 0.45s ease-in-out;*/
-    transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
-  }
-  .overlay {
-    transition: all 0.3s ease-in-out;
-    background: ;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  .title-wrap {
-    transform: translateY(0);
-    transition: transform 0.45s ease-in;
-  }
-  .drop-cap {
-    font-size: 55px;
-    line-height: 28px;
-  }
-  
-  .book__cover-exerpt {
-    color: #6a6a6a;
-    /**padding: 1rem 1.5rem;*/
-    line-height: 1.6;
-    text-align: center;
-    opacity: 1;
-    max-width: 370px;
-    margin: 0 auto;
-    display: block;
-    transition: all 0.25s ease-in-out;
-  }
-   
-  .book__cover {
-    height: 300px;
-    width: 100%;
-  }
-  
-  .book__content {
-    text-align: justify;
-    word-wrap: break-word;
-    font-size: 1.1rem;
-    opacity: 0;
-    /*transition: all 1.5s ease-in-out;*/
-    max-width: 750px;
-    margin: 0 auto 6rem;
-    padding: 0 2rem;
-    /* float: right; */
-  }
-  .book__content p {
-    line-height: 1.8;
-    color: #3a3a3a;
-    margin-bottom: 2.5rem;
-  }
-  .book {
-    overflow: hidden;
-    background: white;
-    height: 300px;
-    width: 100%;
-    box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
-    /*transition: all 0.5s ease-in-out;*/
-    transition: all 0.5s cubic-bezier(0.64, -0.19, 1, 1);
-    border-radius: 25px;
-    float: left;
-    margin: 20 auto;
-  }
-  .night .book{
-    background: #333333;
-  }
-  .book:hover {
-    box-shadow: 0 5px 10px 5px rgba(110,110,110,.4);
-  }
-  .book--expanded {
-    height: 600px;
-    width: 100%;
-    overflow-y: scroll;
-    background-color: rgb(243, 240, 240);
-  }
-
-  .book-scroll::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
-}
-
-  .book--expanded .overlay {
-    opacity: 0.95;
-  }
-  .book--expanded .article-title {
-    color: #404040;
-    font-size: 30px;
-    letter-spacing: 0.05em;
-    width: 50%;
-    height: 50;
-    margin: 18% 0 0 25%;
-    line-height: 1.7;
-    background-color: rgba(250, 250, 250, 0.89);
-    border-radius: 25px;
-  }
-  .book--expanded .title-wrap {
-    transform: translateY(-300px);
-    color: white;
-  }
-  .book--expanded .book__cover-exerpt {
-    opacity: 0;
-  }
-  .book--expanded .book__cover {
-    height: 460px;
-    width: 100%;
-    margin-bottom: 6rem;
-  }
-  .book--expanded .book__content {
-    opacity: 1;
-  }
-  .book--expanded .header-image {
-    height: 50%;
-    width: 100%;
-    transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
-    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
-  }
- 
-  @media(max-width:860px){
-    .article-title {
-        font-size: 15px;
-      }
-
-    .book {
-        overflow: hidden;
-        background: white;
-        height: 300px;
-        width: 80%;
-        box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
-        /*transition: all 0.5s ease-in-out;*/
-        transition: all 0.5s cubic-bezier(0.64, -0.19, 1, 1);
-        border-radius: 25px;
-        float: left;
-        margin: 16px 10% 35px 10%;
-      }
-
-    .book--expanded {
-        height: 50%;
-        width: 80%;
-        overflow-y: scroll;
-        background-color: rgb(243, 240, 240);
-        margin: 16px 10% 35px 10%;
-      }
-    ::-webkit-scrollbar { width: 0px;  }
-    
-    .book--expanded .book__cover {
-        height: 32%;
-        width: 100%;
-        margin-bottom: 6rem;
-      }
-    .book--expanded .header-image {
-        height: 100%;
-        width: 100%;
-        transition: width 0.5s cubic-bezier(0.64, -0.19, 1, 1);
-        background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/Konachan.com.jpg);
-      }
-    
-      .book--expanded .article-title {
-        font-size: 18px;
-        height: 30px;
-        line-height: 1;
-        font-family: 'Roboto Condensed', sans-serif;
-        text-align: center;
-        letter-spacing: 0.025em;
-        transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
-        margin:190 0 0 75 ;
-        padding: 5px;
-      }
-        .book--expanded {
-    height: 600px;
-    width: 80%;
-    overflow-y: scroll;
-    background-color: rgb(243, 240, 240);
-  }
-}

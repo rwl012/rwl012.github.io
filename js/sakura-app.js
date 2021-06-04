@@ -555,7 +555,7 @@ $(document).ready(function () {
   })
   add_upload_tips()
 })
-
+  
 function nextBG () {
   bgindex = bgindex + 1
   console.log(bg[Math.abs(bgindex % bg.length)])
@@ -1246,23 +1246,6 @@ var home = location.href,
       $('#video-add').on('click', function () {
         Siren.addsource()
       })
-    }, AH: function () {
-      if (Poi.windowheight == 'auto') {
-        if ($('h1.main-title').length > 0) {
-          var _height = $(window).height()
-          $('#centerbg').css({
-            'height': _height
-          })
-          $('#bgvideo').css({
-            'min-height': _height
-          })
-          $(window).resize(function () {
-            Siren.AH()
-          })
-        }
-      } else {
-        $('.headertop').addClass('headertop-bar')
-      }
     }, PE: function () {
       if ($('.headertop').length > 0) {
         if ($('h1.main-title').length > 0) {
@@ -1544,7 +1527,6 @@ var home = location.href,
     }
   }
 $(function () {
-  Siren.AH()
   Siren.PE()
   Siren.NH()
   Siren.GT()
@@ -1566,7 +1548,6 @@ $(function () {
       if (mashiro_option.NProgressON) NProgress.start()
       Siren.MNH()
     }).on('pjax:complete', function () {
-      Siren.AH()
       Siren.PE()
       Siren.CE()
       Siren.VA()
@@ -1607,7 +1588,6 @@ $(function () {
       })
     }
     window.addEventListener('popstate', function (e) {
-      Siren.AH()
       Siren.PE()
       Siren.CE()
       timeSeriesReload(true)

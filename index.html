@@ -91,7 +91,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/rwl012/PicGo/5d114977b9e30441f11fc5a5c1011dda64f458ba.jpg".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/rwl012/PicGo/beijing2.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -104,7 +104,7 @@
   </style>
 </head>
 </html>
-<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
+
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
@@ -233,7 +233,7 @@
           <ul id="menu-new" class="menu">
             
               <li>
-                <a href="https://rwl012.github.io/">
+                <a href="/">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
                     <i class="fa  fa-fort-awesome faa-shake biaoqian" aria-hidden="true"></i>
                    首页
@@ -301,6 +301,13 @@
                         </a>
                       </li>
                     
+                      <li>
+                          <a href="/book/ "  >
+                          <i class="fa fa-book biaoqian "  aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -327,8 +334,8 @@
                     
                       <li>
                           <a href="/about/ "  >
-                          <i class="fa fa-meetup biaoqian "  aria-hidden="true"></i>
-                          我？
+                          <i class="fa fa-user biaoqian "  aria-hidden="true"></i>
+                          本人
                         </a>
                       </li>
                     
@@ -363,6 +370,7 @@
 }
 .index-home{
   margin: 0px;
+  background-color: white;
 }  
 
 .top{                    /*移动端顶部暗黑模式*/
@@ -409,13 +417,117 @@ body{
 
 }
 .zhanshi{
-display: none;
+display: block;
 }
 
 @media(max-width:850px){
   .zhanshi{
     display: block;
   }
+}
+
+.bean{
+  background-color:rgba(223,242,255,.5);
+  box-shadow:-5px -5px 10px rgba(32,32,32,.1),5px 5px 10px rgba(32,32,32,.1);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  border-radius:20px;flex-shrink:0
+}
+.block-container{
+    margin-left:20px;
+}
+.block-buttons{
+  width: 850px;
+    display:flex;
+    margin-top:10px;
+    padding: 20 0 20 0;
+}
+.bean-small-button{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items: center;
+    transition:all 0.5s;
+    margin-right:20px;
+    box-sizing: border-box;
+    padding:11px;
+    overflow:hidden;
+}
+
+.bean-small-button svg{
+    fill:#fafafa;
+    flex-shrink: 0;
+}
+.bean-small-button span{
+    color:#fafafa;
+    transition:all 0.5s;
+    width:0;
+    opacity:0;
+    overflow:hidden;
+}
+.bean-small-button-hover {
+    width:170px;
+}
+.bean-small-button-hover span{
+    width:auto;
+    white-space: nowrap;
+    opacity:1;
+}
+.bean-active-effect{
+    transition: all 0.3s;
+}
+.bean-active-effect:active{
+    transform: scale(0.99);
+}
+@media (max-width: 991px) {
+.block-container {
+    display:none;
+    }
+}
+
+section{
+  position: relative;
+  width: 100%;
+
+}
+ .zuhe1{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 999999999;
+}
+.zuhe2{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 99999999;
+}
+.zuhe3{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 99999999;
+}
+.mobshowup{
+  display: none;
+}
+.pcshowup{
+  display: block;
+}
+@media(max-width:850px){
+.mobshowup{
+  display: block;
+}
+.pcshowup{
+  display: none;
+}
 }
 </style>
 
@@ -452,34 +564,28 @@ display: none;
 
 <div class="zhanshi   ">
 
-  <figure id="centerbg" class="centerbg">
-    <div class="focusinfo no-select">
-      <div class=""></div>
-    </div>
-  </figure>
-
+  <section id="centerbg" class="centerbg pcshowup" >
+  <img class="zuhe1" src="/images/background/aila.png" id="aila">
+  <img class="zuhe2" src="/images/background/youli.png" id="youli">
+  <img class="zuhe3" src="/images/background/shinoa.png" id="shinoa"> 
+  <img class="zuhe2" src="/images/background/jiateng.png" id="jiateng">
+  <img class="zuhe3" src="/images/background/caiyu.png" id="caiyu">
+  <img class="zuhe3" src="/images/background/miki.png" id="miki">
+  </section>
+  <canvas id="" class="bgmob mobshowup" ></canvas>
   <div id="wave2"></div>
-  <div id="video-container" style="">
-
-    <div id="video-btn" class="loadvideo videolive">
-    </div>
-    <div id="video-add">
-    </div>
-    <div class="video-stu">
-    </div>
-  </div>
 
 </div>
 
-<div class="header-info">
+
+
+
+<div class="header-info"> <!--手机版显示社交栏-->
   <div><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center">正在加载今日诗词....</p></p>
             <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         </p></div>
+
   <div class="top-social_v2">
-    
-    <!--<li id="bg-pre">
-      <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
-    </li>-->
     
       
         
@@ -534,23 +640,84 @@ display: none;
         
       
     
-    <!--<li id="bg-next">
-      <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">-->
     </li>         
   </div>
 </div>
 
 <div class="index-home">
 <div class="blank" style="padding-top: 0px;"></div>
+
+
 <div id="content" class="site-content">
+
+  <div class="header-infopc1"> <!--显示社交栏-->
+    <div style="background-color: #f0ffff1a;backdrop-filter: blur(2px);padding: 0.5px;border-radius: 20px;"><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center">正在加载今日诗词....</p></p>
+              <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+          </p></div>
+</div>
+
+<div class="header-infopc2"> <!--显示社交栏-->
+  <div class="avatar">
+    <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.9/img/custom/avatar.jpg" > 
+    <p style="margin: 0;color:black;">欢迎来到本站！</p>
+  </div>
+  <div class="aboutme2">
+    <p id="week" style="margin:-11 0 0 145px;font-size: 18px;color: white;">&nbsp;</p>
+    <div id="time" style="margin: -41px;">
+      <span id="hour" style="font-size: 30px;color: white;"></span>
+      <span id="minutes" style="font-size: 30px;color: white;"></span>
+      <span id="seconds"style="font-size:20px;color:white">(ﾉﾟ▽ﾟ)ﾉ正在加载中...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="year" style="color:white"></span>
+      <span id="mouths" style="color:white"></span>
+      <span id="days" style="color:white"></span>
+    </div>
+  </div>
+  <div class="aboutme" ><i class="iconfont icon-hua" ></i> 画饼未来</div>
+  <div class="aboutme1"><i class="iconfont icon-EmailHili"></i> 联系我</div>
+</div>
+
+<div class="block-buttons" >
+  <a  class="bean bean-active-effect bean-small-button bean-small-button-hover " style="background-image: linear-gradient( to right, #70c25c 0%, #70c25c 22%, #ffc04a 22%, #ffc04a 37.6%, #fc903d 37.6%, #fc903d 53.2%, #e94752 53.2%, #e94752 68.8%, #a954a5 68.8%, #a954a5 84.4%, #00afe0 84.4%, #00afe0 100%);width: 220px;border-radius: 10px;">
+    <div style="margin:auto;line-height: 5px;"><i class="iconfont icon-pengyou" style="color: #ffffff;font-size: 25px;"></i> <span style="color:white;">与我有关</span></div>
+</a>
+  <a id="showsth1" class="bean bean-active-effect bean-small-button bean-small-button-hover" href="https://github.com/Archeb" style="background-image: linear-gradient(45deg, #141422 0%, #111122 100%);">
+   <i class="iconfont icon-github" style="color: white;font-size: 25px;"></i>
+      <span style="margin: auto;">Archeb</span>
+  </a>
+  <a id="showsth2" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#dd001b;">
+    <i class="iconfont icon-wangyiyunyinle" style="color: white;font-size: 25px;"></i>
+      <span style="margin: auto;">贫困的蚊子</span>
+  </a>
+  <a id="showsth3" class="bean bean-active-effect bean-small-button" href="https://twitter.com/archebasic" style="background-color:#f4fbff;">
+    <i class="iconfont icon-epic" style="color: rgb(0, 0, 0);font-size: 25px;"></i>
+      <span style="margin: auto;color: #000;">cheBasic</span>
+  </a>
+  <a id="showsth4" class="bean bean-active-effect bean-small-button " href="mailto:i@qwq.moe" style="background-image: linear-gradient(45deg,#f17941 0%,#f56c2d 100%);">
+    <i class="iconfont icon-origin" style="color: white;font-size: 25px;"></i>
+      <span style="margin: auto;">i@qwq.moe</span>
+  </a>
+  <a id="showsth5" class="bean bean-active-effect bean-small-button " href="https://steamcommunity.com/profiles/76561198180228437" style="background-image: linear-gradient(170deg,#152c58 0%,#0b487a 100%);">
+    <i class="iconfont icon-steam" style="color: white;font-size: 25px;"></i>
+      <span style="margin: auto;">Archeb</span>
+  </a>
+  <a id="showsth6" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#ff7299;">
+    <i class="iconfont icon-bilibili1" style="color: white;font-size: 25px;"></i>
+    <span style="margin: auto;">贫困的蚊子</span>
+</a>
+<a id="showsth7" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#e2ddd2;">
+  <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.9/img/social/genshinn.png" style="font-size: 25px;">
+  <span style="margin: auto;color: #000;">贫困的蚊子</span>
+</a>
+</div>
+
   
-  <div class="notice" style="margin-top:30px">
-    <i class="iconfont icon-notification" style="margin-top: 5px;">
+  <div class="notice" style="margin-top:0px;height: 60px;">
+    <i class="iconfont icon-notification" style="margin-top: -2px;color: #464646;">
     </i>
-    <div class="notice-content">【1.25】优化视觉体验<img src="/images/emoji/33-cha.png" style="width: 32px;height: 30px;"></img></div>
+    <div>【6.4】重排PC端页面  </div> <img src="/images/emoji/2233.gif" style="width: 60px;height: 58px;margin-top: -41px;float: right;">
   </div>
   
-  <div class="note danger">博客目前还在建设，可能会存在bug</div> 
+  <div class="note danger">博客目前还在建设，可能会存在bug <img src="/images/emoji/33-cha.png" style="width: 27px;height: 25px;"></div> 
 <!--博客信息
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;margin: 30 0 10;">
     <i class="fa fa-id-card" aria-hidden="true"></i>
@@ -573,7 +740,7 @@ display: none;
   </div>
 -->
   <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;font-size: 18px;font-weight:bold;margin-left: 24px;margin-right: 24px;">
+  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;font-size: 18px;font-weight:bold;/*margin-left: 24px;margin-right: 24px;*/">
   <i class="fa fa-anchor" aria-hidden="true">
   </i>
   快速链接</h1>
@@ -588,6 +755,9 @@ display: none;
           <h3>Sakura</h3>
           <p>本站 hexo 主题</p>
         </div>
+        <p>
+          关于本站的一些信息
+        </p>
       </a>
     </div>
   </div>
@@ -602,6 +772,9 @@ display: none;
           <h3>本站食用指南</h3>
           <p>关于本站的基本介绍</p>
         </div>
+        <p>
+          关于本站的一些信息
+        </p>
       </a>
     </div>
   </div>
@@ -616,21 +789,24 @@ display: none;
           <h3>hojun的万事屋</h3>
           <p>技术服务</p>
         </div>
+        <p>
+          关于本站的一些信息
+        </p>
       </a>
     </div>
   </div>
   
 </div>
-  
+  <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_czdyl2yoi7.css">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;font-size: 18px;font-weight:bold;margin-left: 24px;margin-right: 24px;">
-      <i class="fa fa-book" aria-hidden="true" style="color: #c81812;font-size: 25px;"></i>
+      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;font-size: 18px;font-weight:bold;/*margin-left: 24px;margin-right: 24px;*/">
+      <i class="iconfont icon-wenzhang" aria-hidden="true" style="color: #c81812;font-size: 25px;"></i>
       所有文章</h1>
       
   <!-- 首页默认取最最新文章集 -->
   
-    <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_aemdmk20mwv.css">
+    
 
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
@@ -677,7 +853,7 @@ display: none;
 </article>
 
   
-    <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_aemdmk20mwv.css">
+    
 
 <article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
@@ -724,7 +900,7 @@ display: none;
 </article>
 
   
-    <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_aemdmk20mwv.css">
+    
 
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
@@ -771,7 +947,7 @@ display: none;
 </article>
 
   
-    <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_aemdmk20mwv.css">
+    
 
 <article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
@@ -818,7 +994,7 @@ display: none;
 </article>
 
   
-    <link rel="stylesheet" href="https:////at.alicdn.com/t/font_2347634_aemdmk20mwv.css">
+    
 
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
@@ -929,8 +1105,136 @@ function switchNightMode() {
             $("body").addClass("night");
             $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
         }
-    
+  
   </script>
+
+  <script>
+    function clock(){
+    var hours = document.getElementById('hour');
+    var minutes = document.getElementById('minutes');
+    var seconds = document.getElementById('seconds');
+    var years = document.getElementById('year');
+    var mouths = document.getElementById('mouths');
+    var days = document.getElementById('days');
+    var weeks = document.getElementById('week')
+
+    var h = new Date().getHours();
+    var m = new Date().getMinutes();
+    var s = new Date().getSeconds();
+    var yr = new Date().getFullYear();
+    var mo = new Date().getMonth();
+    var dy = new Date().getDate();
+    var str = "星期" + "日一二三四五六".charAt(new Date().getDay())
+    
+    if(h<10){h = "0"+h; }
+    if(m<10){m = "0"+m; }
+    if(s<10){s = "0"+s; }
+
+    hours.innerHTML = h;
+    minutes.innerHTML = ':' +m;
+    seconds.innerHTML = s;
+    years.innerHTML = yr + ' 年';
+    mouths.innerHTML = mo +1 + ' 月' ;
+    days.innerHTML = dy + ' 日';
+    weeks.innerHTML = str;
+  }
+  var interval = setInterval(clock,1000);
+  </script>
+
+<script>
+$('#showsth1').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+$('#showsth2').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+
+    $('#showsth3').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+
+    $('#showsth4').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+
+    $('#showsth5').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+
+    $('#showsth6').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+     $(showsth7).removeClass('bean-small-button-hover')
+    })
+
+    $('#showsth7').hover(
+    function(){
+     $(this).addClass('bean-small-button-hover')
+     $(showsth2).removeClass('bean-small-button-hover')
+     $(showsth3).removeClass('bean-small-button-hover')
+     $(showsth4).removeClass('bean-small-button-hover')
+     $(showsth5).removeClass('bean-small-button-hover')
+     $(showsth6).removeClass('bean-small-button-hover')
+     $(showsth1).removeClass('bean-small-button-hover')
+    })
+
+</script>
+
+<script>
+  let aila = document.getElementById("aila");
+  let youli = document.getElementById("youli");
+  let shinoa = document.getElementById("shinoa");
+
+  window.addEventListener('scroll',function(){
+    var value = window.scrollY;
+    aila.style.top = value * 0.5 + 'px';
+    shinoa.style.right =  value * 0.7 + 'px';
+    youli.style.right = - value * 0.5 + 'px';
+    jiateng.style.top = value * 0.5 + 'px';
+    caiyu.style.left = value * 0.6 + 'px';
+    miki.style.top = value * 0.9 + 'px'
+  })
+</script>
     </div>    
     <style>
     .fuhao{
@@ -992,7 +1296,7 @@ function switchNightMode() {
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
-      <p style="color: #666666;">&copy 2021<br> <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>
+      <p style="color: #666666;">&copy 2020-2021<br> <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>
           var now = new Date();   //此处为底端运行时间代码
           function createtime() {
             var grt= new Date("01/01/2021 00:00:00");//此处修改你的建站时间或者网站上线时间
@@ -1220,7 +1524,7 @@ $(document).ready(function() {
   <ul id="menu-new-1" class="menu">
     
       <li>
-        <a href="https://rwl012.github.io/">
+        <a href="/">
           <span class="faa-parent animated-hover biaoqian2">
             <i class="fa  fa-fort-awesome faa-shake biaoqian2" aria-hidden="true"></i>
             首页
@@ -1288,6 +1592,13 @@ $(document).ready(function() {
                 </a>
               </li>
             
+              <li>
+                <a href="/book/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
           </ul>
         
       </li>
@@ -1314,8 +1625,8 @@ $(document).ready(function() {
             
               <li>
                 <a href="/about/">
-                  <i class="fa fa-meetup" aria-hidden="true"></i>
-                  我？
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  本人
                 </a>
               </li>
             
