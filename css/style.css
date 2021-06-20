@@ -4121,7 +4121,7 @@ li.feature-2 {
     height:350px;
     margin:0;
     padding:0;
-    background-image: url();
+    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/beijing2.png);
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
@@ -8492,12 +8492,11 @@ td.hljs-ln-numbers {
     }
   
     .night .notice {
-        background:  rgba(51, 51, 51, 0.164); 
+        background-image: linear-gradient(170deg,#b9babf 0%,#6f7b86 100%); 
         color: white;
-        border:1px dashed #e6e6e6
     }
     .night .note.danger {
-        background-color: #6f2229;
+        background-image: linear-gradient(170deg,#7d373e 0%,#4c393a 100%);
         border-left-color: #b31f1b;
     }
     .night .header-info {
@@ -8515,6 +8514,11 @@ td.hljs-ln-numbers {
     .night .pattern-center::after,
     .night .pattern-center-blank,
     .night #footer {
+        background-color:  rgba(51, 51, 51, 0.267);
+    }
+    .night .index-home,
+    .night .site-content
+    {
         background-color:  rgb(51, 51, 51);
     }
     .night strong,
