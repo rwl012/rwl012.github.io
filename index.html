@@ -76,7 +76,7 @@
   mashiro_option.email_name = "";
   mashiro_option.cookie_version_control = "";
   mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "mikiBlog";
+  mashiro_option.site_name = "MikiBlog";
   mashiro_option.author_name = "Blog";
   mashiro_option.site_url = "https://sakura.hojun.cn";
   mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
@@ -187,7 +187,8 @@
 </div>
 
     <div id="page" class="site wrapper yemian "><!--白色空白问题-->
-      <style>
+      <script type="text/javascript" src="/js/darkmode.min.js"></script>
+<style>
   .biaoqian{          /*固定栏字体颜色暗黑模式*/
     color: purple;
   }
@@ -208,7 +209,7 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">miki</span>
+            <span class="sakurasono">Miki</span>
             <span class="shironeko">Blog</span>
             <a onclick="switchNightMode()"><i class="fa fa-moon-o" id="nightMode" aria-hidden="false" style="font-size: 30px;color: rgb(255, 208, 0);margin-top: 13px;"></i></a>
           </a>
@@ -235,7 +236,7 @@
               <li>
                 <a href="/">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
-                    <i class="fa  fa-fort-awesome faa-shake biaoqian" aria-hidden="true"></i>
+                    <i class="fa  fa-fort-awesome faa-shake biaoqian" aria-hidden="true" style="color: #00c091 "></i>
                    首页
                   </span>
                 </a>
@@ -245,7 +246,7 @@
               <li>
                 <a href="/archives">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
-                    <i class="fa  fa-archive faa-shake biaoqian" aria-hidden="true"></i>
+                    <i class="fa  fa-archive faa-shake biaoqian" aria-hidden="true" style="color: #f3a034 "></i>
                    归档
                   </span>
                 </a>
@@ -273,7 +274,7 @@
               <li>
                 <a href="javascript:;">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
-                    <i class="fa  fa-list-ul faa-vertical biaoqian" aria-hidden="true"></i>
+                    <i class="fa  fa-bars biaoqian" aria-hidden="true" style="color: #00afe0 "></i>
                    分类
                   </span>
                 </a>
@@ -315,7 +316,7 @@
               <li>
                 <a href="/comment/">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
-                    <i class="fa  fa-pencil-square-o faa-tada biaoqian" aria-hidden="true"></i>
+                    <i class="fa  fa-pencil-square-o faa-tada biaoqian" aria-hidden="true" style="color: #a954a5 "></i>
                    留言板
                   </span>
                 </a>
@@ -325,7 +326,7 @@
               <li>
                 <a href="/">
                   <span class="faa-parent animated-hover biaoqian">                   <!--固定栏字体颜色-->
-                    <i class="fa  fa-leaf faa-wrench biaoqian" aria-hidden="true"></i>
+                    <i class="fa  fa-heart biaoqian" aria-hidden="true" style="color: #ff5d47 "></i>
                    关于
                   </span>
                 </a>
@@ -426,6 +427,7 @@ display: block;
   }
 }
 
+
 .bean{
   background-color:rgba(223,242,255,.5);
   box-shadow:-5px -5px 10px rgba(32,32,32,.1),5px 5px 10px rgba(32,32,32,.1);
@@ -437,8 +439,8 @@ display: block;
     margin-left:20px;
 }
 .block-buttons{
-  width: 850px;
     display:flex;
+    width: 850px;
     margin-top:10px;
     padding: 20 0 20 0;
 }
@@ -448,7 +450,7 @@ display: block;
     display:flex;
     align-items: center;
     transition:all 0.5s;
-    margin-right:20px;
+    margin-right:29px;
     box-sizing: border-box;
     padding:11px;
     overflow:hidden;
@@ -467,6 +469,14 @@ display: block;
 }
 .bean-small-button-hover {
     width:170px;
+}
+@media (max-width:850px) {
+  .bean{border-radius:10px}
+  .block-buttons{margin-top: 0px;width: auto;}
+  .bean-small-button-hover{width: 50px;}
+  .buttonshow{display: none;}
+  .bean-small-button-hover span{color: black;}
+  .bean-small-button{margin-right: auto;margin-left: auto;}
 }
 .bean-small-button-hover span{
     width:auto;
@@ -581,6 +591,7 @@ section{
 
 
 <div class="header-info"> <!--手机版显示社交栏-->
+  <div style="background-color: #f0ffff1a;backdrop-filter: blur(2px);padding: 0.5px;height: 120px;">
   <div><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center">正在加载今日诗词....</p></p>
             <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         </p></div>
@@ -642,6 +653,7 @@ section{
     
     </li>         
   </div>
+  </div>
 </div>
 
 <div class="index-home">
@@ -662,7 +674,7 @@ section{
   </div>
   <div class="aboutme2">
     <p id="week" style="margin:-11 0 0 145px;font-size: 18px;color: white;">&nbsp;</p>
-    <div id="time" style="margin: -41px;">
+    <div id="time" style="margin: -37px;">
       <span id="hour" style="font-size: 30px;color: white;"></span>
       <span id="minutes" style="font-size: 30px;color: white;"></span>
       <span id="seconds"style="font-size:20px;color:white">(ﾉﾟ▽ﾟ)ﾉ正在加载中...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -676,36 +688,36 @@ section{
 </div>
 
 <div class="block-buttons" >
-  <a  class="bean bean-active-effect bean-small-button bean-small-button-hover " style="background-image: linear-gradient( to right, #70c25c 0%, #70c25c 22%, #ffc04a 22%, #ffc04a 37.6%, #fc903d 37.6%, #fc903d 53.2%, #e94752 53.2%, #e94752 68.8%, #a954a5 68.8%, #a954a5 84.4%, #00afe0 84.4%, #00afe0 100%);width: 220px;border-radius: 10px;">
+  <a  class="bean bean-active-effect bean-small-button bean-small-button-hover buttonshow" style="background-image: linear-gradient( to right, #70c25c 0%, #70c25c 22%, #ffc04a 22%, #ffc04a 37.6%, #fc903d 37.6%, #fc903d 53.2%, #e94752 53.2%, #e94752 68.8%, #a954a5 68.8%, #a954a5 84.4%, #00afe0 84.4%, #00afe0 100%);width: 250px;border-radius: 10px;">
     <div style="margin:auto;line-height: 5px;"><i class="iconfont icon-pengyou" style="color: #ffffff;font-size: 25px;"></i> <span style="color:white;">与我有关</span></div>
 </a>
-  <a id="showsth1" class="bean bean-active-effect bean-small-button bean-small-button-hover" href="https://github.com/Archeb" style="background-image: linear-gradient(45deg, #141422 0%, #111122 100%);">
+  <a id="showsth1" class="bean bean-active-effect bean-small-button bean-small-button-hover" href="https://github.com/rwl012" style="background-image: linear-gradient(45deg, #141422 0%, #111122 100%);">
    <i class="iconfont icon-github" style="color: white;font-size: 25px;"></i>
-      <span style="margin: auto;">Archeb</span>
+      <span style="margin: auto;">rwl012</span>
   </a>
-  <a id="showsth2" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#dd001b;">
+  <a id="showsth2" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=1330766800" style="background-color:#dd001b;">
     <i class="iconfont icon-wangyiyunyinle" style="color: white;font-size: 25px;"></i>
-      <span style="margin: auto;">贫困的蚊子</span>
+      <span style="margin: auto;">如雾里</span>
   </a>
-  <a id="showsth3" class="bean bean-active-effect bean-small-button" href="https://twitter.com/archebasic" style="background-color:#f4fbff;">
+  <a id="showsth3" class="bean bean-active-effect bean-small-button" href="https://www.epicgames.com/store/zh-CN/" style="background-color:#f4fbff;">
     <i class="iconfont icon-epic" style="color: rgb(0, 0, 0);font-size: 25px;"></i>
-      <span style="margin: auto;color: #000;">cheBasic</span>
+      <span style="margin: auto;color: #000;">如雾里icf</span>
   </a>
-  <a id="showsth4" class="bean bean-active-effect bean-small-button " href="mailto:i@qwq.moe" style="background-image: linear-gradient(45deg,#f17941 0%,#f56c2d 100%);">
+  <a id="showsth4" class="bean bean-active-effect bean-small-button " href="https://www.origin.com/hkg/zh-tw/profile/user/Us_m7_zkAXm4u_A4yP5DQA--/achievements" style="background-image: linear-gradient(45deg,#f17941 0%,#f56c2d 100%);">
     <i class="iconfont icon-origin" style="color: white;font-size: 25px;"></i>
-      <span style="margin: auto;">i@qwq.moe</span>
+      <span style="margin: auto;">BBF2333【战地1】</span>
   </a>
-  <a id="showsth5" class="bean bean-active-effect bean-small-button " href="https://steamcommunity.com/profiles/76561198180228437" style="background-image: linear-gradient(170deg,#152c58 0%,#0b487a 100%);">
+  <a id="showsth5" class="bean bean-active-effect bean-small-button " href="https://steamcommunity.com/id/114-514/" style="background-image: linear-gradient(170deg,#152c58 0%,#0b487a 100%);">
     <i class="iconfont icon-steam" style="color: white;font-size: 25px;"></i>
-      <span style="margin: auto;">Archeb</span>
+      <span style="margin: auto;">如雾里</span>
   </a>
-  <a id="showsth6" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#ff7299;">
+  <a id="showsth6" class="bean bean-active-effect bean-small-button" href="https://space.bilibili.com/8251748" style="background-color:#ff7299;">
     <i class="iconfont icon-bilibili1" style="color: white;font-size: 25px;"></i>
-    <span style="margin: auto;">贫困的蚊子</span>
+    <span style="margin: auto;">如雾里</span>
 </a>
-<a id="showsth7" class="bean bean-active-effect bean-small-button" href="https://music.163.com/#/user/home?id=95661828" style="background-color:#e2ddd2;">
+<a id="showsth7" class="bean bean-active-effect bean-small-button" href="https://ys.mihoyo.com/" style="background-color:#e2ddd2;">
   <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.9/img/social/genshinn.png" style="font-size: 25px;">
-  <span style="margin: auto;color: #000;">贫困的蚊子</span>
+  <span style="margin: auto;color: #000;">UID:100595995</span>
 </a>
 </div>
 
@@ -713,10 +725,10 @@ section{
   <div class="notice" style="margin-top:0px;height: 60px;">
     <i class="iconfont icon-notification" style="margin-top: -2px;color: #464646;">
     </i>
-    <div>【6.4】重排PC端页面  </div> <img src="/images/emoji/2233.gif" style="width: 60px;height: 58px;margin-top: -41px;float: right;">
+    <div>【6.22】优化网页显示 出现新bug  </div> <img src="/images/emoji/2233.gif" style="width: 60px;height: 58px;margin-top: -41px;float: right;">
   </div>
   
-  <div class="note danger">博客目前还在建设，可能会存在bug <img src="/images/emoji/33-cha.png" style="width: 27px;height: 25px;"></div> 
+  <div class="note danger">使用时遇到bug不用慌，刷新解决99%的问题 <img src="/images/emoji/33-cha.png" style="width: 27px;height: 25px;"></div> 
 <!--博客信息
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;margin: 30 0 10;">
     <i class="fa fa-id-card" aria-hidden="true"></i>
@@ -904,39 +916,39 @@ section{
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2021/01/21/测试/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://qqpublic.qpic.cn/qq_public/0/0-2985801569-556254340F95B8D020FC517D4F7E3661/0?fmt=jpg&amp;size=71&amp;h=506&amp;w=900&amp;ppv=1/0">
+    <a href="/2021/01/24/Markdown标签样式 copy 11/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
     </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-riqi" style="color: 0061b2;">
-        </i>2021-1-21 13:01</div>
-      <a href="/2021/01/21/测试/" class="post-title">
-        <h3>测试</h3>
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 11/" class="post-title">
+        <h3>Markdown标签样式</h3>
       </a>
       <div class="post-meta">
         <span><i class="fa fa-tags" style="color: #006671;"></i>
         
-            <a href="/tags/测试/">测试<em>·</em></a>
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
           
-            <a href="/tags/test/">test<em>·</em></a>
+            <a href="/tags/记录/">记录<em>·</em></a>
           
-            <a href="/tags/テスト/">テスト<em>·</em></a>
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
           
         </span>
         <span>
           <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
           
-            <a href="/categories/生活/">生活</a>
+            <a href="/categories/技术/">技术</a>
           
         </span>
       </div>
       <div class="float-content">
-        <p>【图文无关】仅测试标签显示是否正常</p>
+        <p>关于Markdown中使用标签的Html代码</p>
         <div class="post-bottom">
-          <a href="/2021/01/21/测试/" class="button-normal">
+          <a href="/2021/01/24/Markdown标签样式 copy 11/" class="button-normal">
             <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
           </a>
         </div>
@@ -951,26 +963,26 @@ section{
 <article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2021/01/01/hello-world/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://qqpublic.qpic.cn/qq_public/0/0-2384026355-DBD9CCDE77270101F8456A9E12C765F2/0?fmt=jpg&amp;size=81&amp;h=506&amp;w=900&amp;ppv=1/0">
+    <a href="/2021/01/24/Markdown标签样式 copy 14/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
     </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-riqi" style="color: 0061b2;">
-        </i>2021-1-1 16:01</div>
-      <a href="/2021/01/01/hello-world/" class="post-title">
-        <h3>Hello World</h3>
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 14/" class="post-title">
+        <h3>Markdown标签样式</h3>
       </a>
       <div class="post-meta">
         <span><i class="fa fa-tags" style="color: #006671;"></i>
         
-            <a href="/tags/测试/">测试<em>·</em></a>
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
           
-            <a href="/tags/寒蝉/">寒蝉<em>·</em></a>
+            <a href="/tags/记录/">记录<em>·</em></a>
           
-            <a href="/tags/レナ/">レナ<em>·</em></a>
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
           
         </span>
         <span>
@@ -981,9 +993,9 @@ section{
         </span>
       </div>
       <div class="float-content">
-        <p>【图文无关】仅测试标签显示是否正常</p>
+        <p>关于Markdown中使用标签的Html代码</p>
         <div class="post-bottom">
-          <a href="/2021/01/01/hello-world/" class="button-normal">
+          <a href="/2021/01/24/Markdown标签样式 copy 14/" class="button-normal">
             <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
           </a>
         </div>
@@ -998,26 +1010,26 @@ section{
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2018/12/12/Hexo-Theme-Sakura/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://qqpublic.qpic.cn/qq_public/0/0-2861929662-4D5C6647DFA8159E15362C0E67E73A80/0?fmt=jpg&amp;size=90&amp;h=506&amp;w=900&amp;ppv=1/0">
+    <a href="/2021/01/24/Markdown标签样式 copy 10/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
     </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-riqi" style="color: 0061b2;">
-        </i>2018-12-12 22:12</div>
-      <a href="/2018/12/12/Hexo-Theme-Sakura/" class="post-title">
-        <h3>Hexo-Theme-Sakura</h3>
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 10/" class="post-title">
+        <h3>Markdown标签样式</h3>
       </a>
       <div class="post-meta">
         <span><i class="fa fa-tags" style="color: #006671;"></i>
         
-            <a href="/tags/测试/">测试<em>·</em></a>
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
           
-            <a href="/tags/寒蝉/">寒蝉<em>·</em></a>
+            <a href="/tags/记录/">记录<em>·</em></a>
           
-            <a href="/tags/梨花/">梨花<em>·</em></a>
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
           
         </span>
         <span>
@@ -1028,9 +1040,244 @@ section{
         </span>
       </div>
       <div class="float-content">
-        <p>【图文无关】仅测试标签显示是否正常</p>
+        <p>关于Markdown中使用标签的Html代码</p>
         <div class="post-bottom">
-          <a href="/2018/12/12/Hexo-Theme-Sakura/" class="button-normal">
+          <a href="/2021/01/24/Markdown标签样式 copy 10/" class="button-normal">
+            <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2021/01/24/Markdown标签样式 copy 12/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-riqi" style="color: 0061b2;">
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 12/" class="post-title">
+        <h3>Markdown标签样式</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags" style="color: #006671;"></i>
+        
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
+          
+            <a href="/tags/记录/">记录<em>·</em></a>
+          
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>关于Markdown中使用标签的Html代码</p>
+        <div class="post-bottom">
+          <a href="/2021/01/24/Markdown标签样式 copy 12/" class="button-normal">
+            <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2021/01/24/Markdown标签样式 copy 15/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-riqi" style="color: 0061b2;">
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 15/" class="post-title">
+        <h3>Markdown标签样式</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags" style="color: #006671;"></i>
+        
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
+          
+            <a href="/tags/记录/">记录<em>·</em></a>
+          
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>关于Markdown中使用标签的Html代码</p>
+        <div class="post-bottom">
+          <a href="/2021/01/24/Markdown标签样式 copy 15/" class="button-normal">
+            <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2021/01/24/Markdown标签样式 copy 16/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-riqi" style="color: 0061b2;">
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 16/" class="post-title">
+        <h3>Markdown标签样式</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags" style="color: #006671;"></i>
+        
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
+          
+            <a href="/tags/记录/">记录<em>·</em></a>
+          
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>关于Markdown中使用标签的Html代码</p>
+        <div class="post-bottom">
+          <a href="/2021/01/24/Markdown标签样式 copy 16/" class="button-normal">
+            <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2021/01/24/Markdown标签样式 copy 3/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-riqi" style="color: 0061b2;">
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 3/" class="post-title">
+        <h3>Markdown标签样式</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags" style="color: #006671;"></i>
+        
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
+          
+            <a href="/tags/记录/">记录<em>·</em></a>
+          
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>关于Markdown中使用标签的Html代码</p>
+        <div class="post-bottom">
+          <a href="/2021/01/24/Markdown标签样式 copy 3/" class="button-normal">
+            <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2021/01/24/Markdown标签样式 copy 2/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.6/img/loader/lazyload.gif" data-src="http://02imgmini.eastday.com/mobile/20200321/20200321184124_a59ea539e77636e2a56554b46ebbcda2_3.jpeg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-riqi" style="color: 0061b2;">
+        </i>2021-1-24 21:01</div>
+      <a href="/2021/01/24/Markdown标签样式 copy 2/" class="post-title">
+        <h3>Markdown标签样式</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags" style="color: #006671;"></i>
+        
+            <a href="/tags/Md语法/">Md语法<em>·</em></a>
+          
+            <a href="/tags/记录/">记录<em>·</em></a>
+          
+            <a href="/tags/强调标签/">强调标签<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-newfile" style="color: orange;font-size: 20px;"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>关于Markdown中使用标签的Html代码</p>
+        <div class="post-bottom">
+          <a href="/2021/01/24/Markdown标签样式 copy 2/" class="button-normal">
             <i class="iconfont icon-caidan" style="color: rgb(151, 146, 146);"></i>
           </a>
         </div>
@@ -1044,26 +1291,22 @@ section{
 
     </main>
       <!-- 首页默认取最最新文章集 -->
-    <!--  -->
+    <!-- 
+      <nav class="navigator">
+        
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-right"></i></a>
+      </nav>
+     -->
   </div>
+  
+    <div id="pagination"><a href="/page/2/" class="">Previous</a></div>
   
 </div>
 </div>
 
 <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
 <script>
-  "use strict";
 
-  $('.book').on('click', function () {
-    $(this).toggleClass('book--expanded');
-    $('.booka').toggleClass('kieru')
-  });
-
-  $('.booka').on('click', function () {
-    $(this).toggleClass('book--expanded');
-    $('.book').toggleClass('kieru')
-  });
-  
 //点击按钮后切换模式
 function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
@@ -1104,7 +1347,16 @@ function switchNightMode() {
             $("body").addClass("night");
             $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
         }
-  
+    let aila = document.getElementById("aila");
+    let youli = document.getElementById("youli");
+    let shinoa = document.getElementById("shinoa");
+
+    window.addEventListener('scroll',function(){
+      var value = window.scrollY;
+      shinoa.style.right =  value * 0.7 + 'px';
+      youli.style.right = - value * 0.5 + 'px';
+      caiyu.style.left = value * 0.6 + 'px';
+    })
   </script>
 
   <script>
@@ -1226,12 +1478,9 @@ $('#showsth2').hover(
 
   window.addEventListener('scroll',function(){
     var value = window.scrollY;
-    aila.style.top = value * 0.5 + 'px';
     shinoa.style.right =  value * 0.7 + 'px';
     youli.style.right = - value * 0.5 + 'px';
-    jiateng.style.top = value * 0.5 + 'px';
     caiyu.style.left = value * 0.6 + 'px';
-    miki.style.top = value * 0.9 + 'px'
   })
 </script>
     </div>    
@@ -1500,7 +1749,7 @@ $(document).ready(function() {
   <div class="m-avatar">
     <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.0.9/img/custom/avatar.jpg" > 
 
-    <div class="ziti">mikiBlog</div>
+    <div class="ziti">MikiBlog</div>
   </div>
   <div class="ms">
 
@@ -1563,7 +1812,7 @@ $(document).ready(function() {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-list-ul faa-vertical biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-bars biaoqian2" aria-hidden="true"></i>
             分类
           </span>
         </a>
@@ -1615,7 +1864,7 @@ $(document).ready(function() {
       <li>
         <a href="/">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-leaf faa-wrench biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-heart biaoqian2" aria-hidden="true"></i>
             关于
           </span>
         </a>

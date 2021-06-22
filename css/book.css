@@ -59,6 +59,7 @@
 }
 #book .content li{
   list-style:none;
+  background-color: white;
   margin-bottom:16px;
   border-radius:3px;
   box-shadow:0 14px 38px rgba(0,0,0,.08),0 3px 8px rgba(0,0,0,.06);

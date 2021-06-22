@@ -1702,7 +1702,7 @@ a:hover,a:active {
     padding:30px 0 0
 }
 .site-content {
-    max-width:850px;
+    max-width:950px;
     padding:0 10px;
     margin-left:auto;
     margin-right:auto;
@@ -1879,13 +1879,13 @@ i.iconfont.hotpost {
 }
 }.post-list-thumb {
     float:left;
-    width:100%;
+    width:45%;
     height:300px;
     position:relative;
-    margin:20px 0 20px;
+    margin:0px 23px 60px;
     border-radius:10px;
     background-color:rgba(255,255,255,0);
-    box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
+    box-shadow:0 1px 12px -5px rgba(0,0,0,.5);
     opacity:0;
     transition:box-shadow .3s ease
 }
@@ -1925,7 +1925,7 @@ i.iconfont.hotpost {
 }
 .post-date,.post-meta,.post-meta a {
     color:#888;
-    font-size:15px;
+    font-size:14px;
     margin-bottom:5px
 }
 .comments-number {
@@ -1958,9 +1958,9 @@ i.iconfont.hotpost {
     position:relative;
     display:inline-block;
     float:right;
-    padding-right:30px;
+    /*padding-right:30px;*/
     padding-left:0;
-    width:40%;
+    width:159px;
     margin:20px 10px 0 10px
 }
 .float-content {
@@ -1990,9 +1990,9 @@ i.iconfont.hotpost {
 }
 .post-list-thumb-left .post-content-wrap {
     float:left;
-    padding-left:30px;
+    padding-left:15px;
     padding-right:0;
-    text-align:right;
+    text-align:left;
     margin:20px 10px 10px 0
 }
 .post-list-thumb-left .post-thumb {
@@ -2687,7 +2687,7 @@ h1.page-title.mb- {
     height:250px
 }
 .author-profile {
-    padding:30px 12.78%;
+    padding:0px 12.78%;
     text-align:center
 }
 .author-profile .info {
@@ -4125,7 +4125,7 @@ li.feature-2 {
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
-    z-index:-1
+    z-index:0
 }
 
 @media(max-width:560px) {
@@ -4278,7 +4278,7 @@ li.feature-2 {
     font-size:16px;
     color:#eaeadf;
     background:rgba(165, 160, 160, 0.363);
-    padding:15px;
+    padding:5px;
     margin-top:30px;
     letter-spacing:0;
     line-height:30px;
@@ -4289,9 +4289,9 @@ li.feature-2 {
 }
 
 .header-infopc1 {
-    width:300px;       /*社交栏宽度*/
+    width:380px;       /*社交栏宽度*/
     height: 110px;
-    margin:0 20 0 0px;
+    margin:0 30 0 0px;
     font-size:16px;
     font-weight: bold;
     color:#ffffff;
@@ -4333,7 +4333,8 @@ li.feature-2 {
     width:90px;
     height:90px;
     max-width:90px;
-    border-radius:25%
+    border-radius:25%;
+    margin-top: 10px;
 }
 .pcsocial {  
     height:32px;
@@ -4401,7 +4402,7 @@ li.feature-2 {
   }
   
   @media(prefers-color-scheme: light) {
-    .header-info {background: rgba(121, 118, 118, 0.096);  color:#464646;/* border:1px dashed #464646;*/}  
+    .header-info {background-image: url(/images/cover/meiri.png);  color:#f7f3f3;/* border:1px dashed #464646;*/}  
   }
   @media(max-width: 850px) {
     .header-info {display: block;}  
@@ -6226,7 +6227,7 @@ button.botui-actions-buttons-button {
     padding-top:5px
 }
 .logolink.moe-mashiro .shironeko {
-    margin-left:-5px
+    margin-left:-3px
 }
 .forgetmenot input[type=checkbox] {
     border:1px solid #b4b9be;
@@ -7557,7 +7558,8 @@ to {
     margin-top:30px
 }
 .top-feature-v2 {
-    display:inline-block
+    display:inline-block;
+    margin-left: 25px
 }
 .the-feature {
     position:relative;
@@ -7578,17 +7580,16 @@ to {
 }
 .the-feature img {
     height:160px;
-    width:257px
+    width:282px
 }
 .the-feature.from_left_and_right {
     position:relative;
     height:100px;
-    width:257px;
+    width:282px;
     background-color: white;
     box-shadow:1px 1px 3px rgba(0,0,0,.3);
     overflow:hidden;
     border-radius:10px;
-    margin-left: 13px;
 }
 .the-feature.from_left_and_right .img {
     -webkit-transition:all .35s ease-in-out;
@@ -8058,7 +8059,7 @@ img[src*="#in-center"] {
 #wave2 {
     width:auto;
     height:80px;
-    background:url("/images/cover/wave2.png") repeat-x;
+    background:url("/images/cover/wave2xiugai.png") repeat-x;
     position:relative;
     margin-top: -79px;
     bottom:0;
@@ -8434,7 +8435,6 @@ td.hljs-ln-numbers {
     .night #vcomments .vbtn,
     .night .art-content #archives .al_mon_list .al_mon,
     .night .art-content #archives .al_mon_list span,
-    .night body,
     .night .art-content #archives .al_mon_list .al_mon,
     .night .art-content #archives .al_mon_list span,
     .night button,
@@ -8462,6 +8462,7 @@ td.hljs-ln-numbers {
     .night .biaoqian,
     .night .biaoqian2,
     .night .ziti,
+    .night .grey-text.text-darken-4,
     .night .site-title{
         color:white;
     }
@@ -8498,32 +8499,47 @@ td.hljs-ln-numbers {
     .night .note.danger {
         background-image: linear-gradient(170deg,#7d373e 0%,#4c393a 100%);
         border-left-color: #b31f1b;
+        color: #e4e0e0;
     }
     .night .header-info {
-        background:rgba(212, 208, 208, 0.274); 
+        background-image: url(/images/cover/meiri.png); 
         color: #eaeadf}
 
-    .night #page,
+
     .night body,
     .night #colophon,
-    .night #main-container,
-    .night #page ,
-    .night .post-list-thumb,
     .night #content,
     .night #contentss,
     .night .pattern-center::after,
     .night .pattern-center-blank,
+    .night #book .content,
     .night #footer {
-        background-color:  rgba(51, 51, 51, 0.267);
+        background-color:  rgb(51, 51, 51);
+    }
+    .night #main-container,
+    .night #page {
+        background-color: rgba(51, 51, 51);
+    }
+    .night .card .card-content{background-color: #31312f;}
+    .night .post-list-thumb{
+        background-color: rgb(42 43 45);
     }
     .night .index-home,
-    .night .site-content
+    .night .site-content,
+    .night .dibu
     {
         background-color:  rgb(51, 51, 51);
     }
+    .night #book .content li{background: #2d2b2b;}
     .night strong,
     .night img {
         filter: brightness(.7);
+    }
+    .night #centerbg{
+        background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/nightbeijing.png);
+    }
+    .night #wave2 {
+        background:url("/images/cover/wave2dark.png") repeat-x;
     }
 
     .heiyebutton{        /*移动端侧边栏黑夜模式按钮*/
