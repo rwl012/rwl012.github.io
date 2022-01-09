@@ -1365,7 +1365,7 @@ a:hover,a:active {
     position:fixed;
     z-index:9999;
     top:0;
-    box-shadow:0 0 2px 0 rgba(0,0,0,.12),0px 2px 2px 0 rgba(0, 0, 0, 0.103)
+    /*box-shadow:0 0 2px 0 rgba(0,0,0,.12),0px 2px 2px 0 rgba(0, 0, 0, 0.103)*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1374,7 +1374,7 @@ a:hover,a:active {
   }
   
   @media (prefers-color-scheme: light) {
-    .site-header {background: white; color:  #555;}
+    .site-header {/*background: rgb(255, 255, 255);*/ color:  rgb(7, 7, 7);}
   
   }
 
@@ -1400,7 +1400,7 @@ a:hover,a:active {
   }
   
   @media (prefers-color-scheme: light) {
-    .yya {background:rgba(255, 255, 255, 0.959);box-shadow: 0 1px 40px -8px rgba(0,0,0,.5)}
+    .yya {/*background:rgba(255, 255, 255, 0.959);*/box-shadow: 0 1px 40px -8px rgba(0,0,0,.5)}
   
   }
 
@@ -1477,7 +1477,7 @@ a:hover,a:active {
 }
 .site-top .lower {
     display:inline-block;
-    margin:15px 0 0 175px;
+    margin:15px 0 0 -150px;
     font-size:17px;
     position:relative;
     left:-50%;
@@ -1699,10 +1699,10 @@ a:hover,a:active {
     color:#545454
 }
 .site-main {
-    padding:30px 0 0
+    padding:10px 0 0
 }
 .site-content {
-    max-width:850px;
+    max-width:1017px;
     padding:0 10px;
     margin-left:auto;
     margin-right:auto;
@@ -1879,10 +1879,10 @@ i.iconfont.hotpost {
 }
 }.post-list-thumb {
     float:left;
-    width:100%;
+    width:46%;
     height:300px;
     position:relative;
-    margin:20px 0 20px;
+    margin:20px 16px 20px;
     border-radius:10px;
     background-color:rgba(255,255,255,0);
     box-shadow:0 1px 20px -6px rgba(0,0,0,.5);
@@ -1932,7 +1932,7 @@ i.iconfont.hotpost {
     margin:0 10px
 }
 .post-thumb {
-    float:right;
+    float:left;
     width:55%
 }
 .post-thumb a {
@@ -1942,7 +1942,7 @@ i.iconfont.hotpost {
     background-repeat:no-repeat;
     background-size:cover;
     overflow:hidden;
-    border-radius:0 10px 10px 0
+    border-radius:10px 0 0 10px
 }
 .post-thumb a img {
     width:100%;
@@ -1958,9 +1958,8 @@ i.iconfont.hotpost {
     position:relative;
     display:inline-block;
     float:right;
-    padding-right:30px;
     padding-left:0;
-    width:40%;
+    width:38%;
     margin:20px 10px 0 10px
 }
 .float-content {
@@ -1985,15 +1984,14 @@ i.iconfont.hotpost {
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:3;
-    height:67.5px;
+    height:42.5px;
     overflow:hidden
 }
 .post-list-thumb-left .post-content-wrap {
     float:left;
-    padding-left:30px;
     padding-right:0;
-    text-align:right;
-    margin:20px 10px 10px 0
+    text-align:left;
+    margin:20px 0px 10px 13px
 }
 .post-list-thumb-left .post-thumb {
     float:left
@@ -4007,7 +4005,12 @@ li.feature-2 {
   }
   
   @media (prefers-color-scheme: light) {
-    .notice {background-image: linear-gradient(170deg,#f1f6ff 0%,#b4b9bd 100%); color: #464646;}
+    .notice {
+        background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/6t7hu-1y6sf.gif); 
+        color: #f3e5e5;
+        background-position: 50% 61%;
+        background-size: 106% 165%;
+    }
   
   }
 
@@ -4118,14 +4121,14 @@ li.feature-2 {
 /*背景图片样式*/
 #centerbg {              
     width:100%;
-    height:350px;
+    height:500px;
     margin:0;
     padding:0;
-    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/beijing2.png);
+    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/__ganyu_and_keqing_genshin_impact__2f606b27c0790463d1218be150db7a08%20-%2002.jpg);
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-size:cover;
-    z-index:-1
+    background-size:100%;
+    z-index:0
 }
 
 @media(max-width:560px) {
@@ -4278,7 +4281,7 @@ li.feature-2 {
     font-size:16px;
     color:#eaeadf;
     background:rgba(165, 160, 160, 0.363);
-    padding:15px;
+    padding:5px;
     margin-top:30px;
     letter-spacing:0;
     line-height:30px;
@@ -4333,7 +4336,8 @@ li.feature-2 {
     width:90px;
     height:90px;
     max-width:90px;
-    border-radius:25%
+    border-radius:25%;
+    margin-top: 10px;
 }
 .pcsocial {  
     height:32px;
@@ -4361,39 +4365,8 @@ li.feature-2 {
     float:left;
     margin-right:13px
 }
-.aboutme{
-    width:160px;
-    height: 40px;
-    background-image:linear-gradient(170deg,#f3d55d 0%,#ecc21b 100%);
-    border-radius: 15px;
-    text-align: center;
-    line-height: 40px;
-    float: left;
-    margin-right: 5px;
-    margin-top: 13px;
-}
-.aboutme1{
-    width:160px;
-    height: 40px;
-    background-image:linear-gradient(45deg, #3fa86b 0%, #166e3b 100%);
-    border-radius: 15px;
-    text-align: center;
-    line-height: 40px;
-    float: left;
-    margin-right: 5px;
-    margin-top: 13px;
-}
-.aboutme2{
-    width:330px;
-    height: 60px;
-    background-image:linear-gradient(170deg,#152c58 0%,#0092ff 100%);
-    border-radius: 15px;
-    text-align: center;
-    line-height: 56px;
-    float: left;
-    margin-right: 5px;
 
-}
+
 /*社交栏暗黑模式*/
 @media (prefers-color-scheme: dark) {
     .header-info {background:rgba(212, 208, 208, 0.274); color: #eaeadf; /*border:1px dashed #eaeadf;*/}
@@ -4401,7 +4374,7 @@ li.feature-2 {
   }
   
   @media(prefers-color-scheme: light) {
-    .header-info {background: rgba(121, 118, 118, 0.096);  color:#464646;/* border:1px dashed #464646;*/}  
+    .header-info {background-image: url(/images/cover/meiri.png);  color:#f7f3f3;/* border:1px dashed #464646;*/}  
   }
   @media(max-width: 850px) {
     .header-info {display: block;}  
@@ -6185,7 +6158,7 @@ button.botui-actions-buttons-button {
   }
   
   @media (prefers-color-scheme: light) {
-    .logolink .sakurasono {background: rgba(255,255,255,.5); color:  #555;}
+    .logolink .sakurasono {background: none; color: #000000;}
   
   }
 
@@ -6206,7 +6179,7 @@ button.botui-actions-buttons-button {
     padding-left:6px;
     padding-right:15px;
     padding-top:11px;
-    text-decoration-line:none
+    text-decoration-line:none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -6215,7 +6188,7 @@ button.botui-actions-buttons-button {
   }
   
   @media (prefers-color-scheme: light) {
-    .logolink.moe-mashiro a {color: #464646;}
+    .logolink.moe-mashiro a {color: #000000;}
   
   }
 
@@ -6226,7 +6199,7 @@ button.botui-actions-buttons-button {
     padding-top:5px
 }
 .logolink.moe-mashiro .shironeko {
-    margin-left:-5px
+    margin-left:-3px
 }
 .forgetmenot input[type=checkbox] {
     border:1px solid #b4b9be;
@@ -7554,7 +7527,7 @@ to {
 .top-feature-row {
     width:100%;
     height:auto;
-    margin-top:30px
+    margin-top:5px
 }
 .top-feature-v2 {
     display:inline-block
@@ -7582,13 +7555,14 @@ to {
 }
 .the-feature.from_left_and_right {
     position:relative;
-    height:100px;
-    width:257px;
+    height:145px;
+    width:300px;
     background-color: white;
     box-shadow:1px 1px 3px rgba(0,0,0,.3);
     overflow:hidden;
     border-radius:10px;
-    margin-left: 13px;
+    margin-right: 9px;
+    margin-left: 19px;
 }
 .the-feature.from_left_and_right .img {
     -webkit-transition:all .35s ease-in-out;
@@ -8058,7 +8032,7 @@ img[src*="#in-center"] {
 #wave2 {
     width:auto;
     height:80px;
-    background:url("/images/cover/wave2.png") repeat-x;
+    background:url("/images/cover/wave2xiugai.png") repeat-x;
     position:relative;
     margin-top: -79px;
     bottom:0;
@@ -8392,12 +8366,12 @@ td.hljs-ln-numbers {
 }*/
 .deng-t {
     font-family: 华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;
-    font-size: 15px;
+    font-size: 25px;
+    margin-top: 1px;
     color: #dc8f03;
     font-weight:bolder;
     line-height: 30px;
     text-align: center;
-    margin: 0,30px,0,0;
 }
 .night .deng-t,
 .night .deng-box,
@@ -8434,7 +8408,6 @@ td.hljs-ln-numbers {
     .night #vcomments .vbtn,
     .night .art-content #archives .al_mon_list .al_mon,
     .night .art-content #archives .al_mon_list span,
-    .night body,
     .night .art-content #archives .al_mon_list .al_mon,
     .night .art-content #archives .al_mon_list span,
     .night button,
@@ -8453,7 +8426,7 @@ td.hljs-ln-numbers {
     .night .site-header,
     .night .top,
     .night #mo-nav{                           /*固定栏*/
-       background-color: rgb(32, 32, 32)
+       background-color: rgb(32, 32, 32, 0)
     }
     
     .night .site-top ul li a,
@@ -8498,32 +8471,45 @@ td.hljs-ln-numbers {
     .night .note.danger {
         background-image: linear-gradient(170deg,#7d373e 0%,#4c393a 100%);
         border-left-color: #b31f1b;
+        color: #e4e0e0;
     }
     .night .header-info {
-        background:rgba(212, 208, 208, 0.274); 
+        background-image: url(/images/cover/meiri.png); 
         color: #eaeadf}
 
-    .night #page,
+
     .night body,
     .night #colophon,
-    .night #main-container,
-    .night #page ,
-    .night .post-list-thumb,
     .night #content,
     .night #contentss,
     .night .pattern-center::after,
     .night .pattern-center-blank,
     .night #footer {
-        background-color:  rgba(51, 51, 51, 0.267);
+        background-color:  rgb(51, 51, 51);
+    }
+    .night #main-container,
+    .night #page {
+        background-color: rgba(51, 51, 51);
+    }
+    .night .post-list-thumb{
+        background-color: rgb(42 43 45);
     }
     .night .index-home,
-    .night .site-content
+    .night .site-content,
+    .night .dibu
     {
         background-color:  rgb(51, 51, 51);
     }
     .night strong,
     .night img {
         filter: brightness(.7);
+    }
+    .night #centerbg{
+        background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/illust_74540234_20200622_013140.jpg);
+        background-position: 100% 63%;
+    }
+    .night #wave2 {
+        background:url("/images/cover/wave2dark.png") repeat-x;
     }
 
     .heiyebutton{        /*移动端侧边栏黑夜模式按钮*/
@@ -8627,8 +8613,8 @@ td.hljs-ln-numbers {
 .note {
     position: relative;
     padding: 15px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: -15px;
+    margin-bottom: 15px;
     border: initial;
     border-left: 3px solid #eee;
     background-color: #f9f9f9;

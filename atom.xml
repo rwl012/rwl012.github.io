@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rwl012.github.io/"/>
-  <updated>2021-01-25T06:19:11.959Z</updated>
+  <updated>2022-01-09T10:25:42.409Z</updated>
   <id>http://rwl012.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022年</title>
+    <link href="http://rwl012.github.io/2022/01/09/%E6%B5%8B%E8%AF%951/"/>
+    <id>http://rwl012.github.io/2022/01/09/测试1/</id>
+    <published>2022-01-09T10:23:22.000Z</published>
+    <updated>2022-01-09T10:25:42.409Z</updated>
+    
+    <summary type="html">
+    
+      【图文无关】仅测试标签显示是否正常
+    
+    </summary>
+    
+      <category term="生活" scheme="http://rwl012.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="测试" scheme="http://rwl012.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="test" scheme="http://rwl012.github.io/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>寒蝉图集</title>
