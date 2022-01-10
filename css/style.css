@@ -740,7 +740,7 @@ dfn {
 }
 h1 {
     font-size:2em;
-    margin:.67em 0
+    margin:1.07em 0
 }
 mark {
     background:#ff0;
@@ -7550,8 +7550,8 @@ to {
     text-decoration:none
 }
 .the-feature img {
-    height:160px;
-    width:257px
+    height:187px;
+    width:300px
 }
 .the-feature.from_left_and_right {
     position:relative;
