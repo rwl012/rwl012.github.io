@@ -49,7 +49,7 @@ mashiro_global.ini = new function () {
           'left': '-236px'
         }).animate({
           'left': '-1233px'
-        }, 50000, 'linear', waveloop1)
+        },60000, 'linear', waveloop1)
       }
 //波纹
       function waveloop2 () {
@@ -559,17 +559,14 @@ $(document).ready(function () {
 function nextBG () {
   bgindex = bgindex + 1
   console.log(bg[Math.abs(bgindex % bg.length)])
-  $('.centerbg').css('background-image', 'url("' + bg[Math.abs(bgindex % bg.length)] + '")')
 }
 
 function preBG () {
   bgindex = bgindex - 1
   console.log(bg[Math.abs(bgindex % bg.length)])
-  $('.centerbg').css('background-image', 'url("' + bg[Math.abs(bgindex % bg.length)] + '")')
 }
 $(document).ready(function () {
   var bgindex = Math.floor(Math.random() * bg.length)
-  $('.centerbg').css('background-image', 'url("' + bg[bgindex] + '")')
   $('#bg-next').click(function () {
     nextBG()
   })
@@ -1314,6 +1311,7 @@ var home = location.href,
       var h1 = 0,
         h2 = 50,
         ss = $(document).scrollTop()
+
       $(window).scroll(function () {
         var s = $(document).scrollTop()
         if (s == h1) {
