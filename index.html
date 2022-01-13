@@ -107,6 +107,7 @@
 
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -419,6 +420,7 @@ body{
 }
 .zhanshi{
 display: block;
+background: white;
 }
 
 @media(max-width:850px){
@@ -470,8 +472,9 @@ display: block;
     width:198px;
 }
 @media (max-width:850px) {
-  .bean{border-radius:10px}
-  .block-buttons{margin-top: 0px;width: auto;}
+  .bean{border-radius:0px}
+  .block-buttons{margin-top: 0px;width: 100%;padding: 0;overflow: scroll;}
+  .block-buttons::-webkit-scrollbar{ height: 0;}
   .bean-small-button-hover{width: 50px;}
   .buttonshow{display: none;}
   .bean-small-button-hover span{color: black;}
@@ -540,6 +543,7 @@ section{
 }
 .botton-float{
   width: 730px;
+  margin-left: 141px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -547,13 +551,23 @@ section{
   background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg);
   background-size: 100% 388%;
   background-position: 0 -110px ;
+  width:366px
 }
 .pics1{
   background-image: url(/images/banner/doraemon.png);
   background-size: 100% 115%;
   background-position: 0 -120px ;
 }
+.pic2-box{
+  width:110px;
+  position: relative;
+  margin-top:-116px;
+  margin-left: 840px;
+}
 .pics2{
+  width:150px;
+  height:115px;
+  border-radius: 10px;
   background-image: url(/images/banner/space.jpg);
   background-size: 100% 100%;
   background-position: 0 0px ;
@@ -563,6 +577,47 @@ section{
 }
 .botton-day{
   background:rgb(32, 31, 31); 
+}
+.botton-float-each{
+    width:180px;
+    height:50px;
+    border-radius: 10px;
+}
+/*适配移动端*/
+@media (max-width:860px) {
+  .text-show{
+    display: none;
+  }
+
+  .botton-float{
+    width:442px;
+    margin: auto;
+  }
+
+  .botton-float-each{
+    width:200px;
+    height:50px;
+    border-radius: 10px;
+  }
+
+  .pics{
+    margin-top: 20px;
+    width: 423px;
+  }
+  .pics2{
+  width:424px;
+  height:96px;
+  border-radius: 10px;
+  background-size: 100% 283%;
+  background-position: 0 -62px ;
+  }
+  .pic2-box{
+  width:440px;
+  position: relative;
+  margin-top:20px;
+  margin-left: auto;
+  margin-right:auto
+  }
 }
 </style>
 
@@ -606,75 +661,6 @@ section{
 
 </div>
 
-
-
-
-<div class="header-info"> <!--手机版显示社交栏-->
-  <div style="background-color: #f0ffff1a;backdrop-filter: blur(2px);padding: 0.5px;height: 120px;">
-  <div><p id="duanluo">每日一句:<!--Live your life with passion!--><p id="jinrishici-sentence" style="text-align: center">正在加载今日诗词....</p></p>
-            <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        </p></div>
-
-  <div class="top-social_v2">
-    
-      
-        
-          <li>
-            <a href="https://github.com/rwl012" target="_blank" class="social-github" title="github">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/github.png">
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://space.bilibili.com/8251748" target="_blank" class="social-github" title="bilibili">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/bilibili.png">
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="" target="_blank" class="social-github" title="steam">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/steam.png">
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="" target="_blank" class="social-github" title="origin">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/origin.png">
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="" target="_blank" class="social-github" title="genshinn">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/genshinn.png">
-            </a>
-          </li>
-        
-      
-        
-          <li class="wechat">
-            <a href="/#">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/social/wechat.png">
-            </a>
-            <div class="wechatInner">
-              <img src="https://cdn.jsdelivr.net/gh/rwl012/cdn@0.1.0/img/custom/wechat.jpg">
-            </div>
-          </li>
-        
-      
-    
-    </li>         
-  </div>
-  </div>
-</div>
-
 <div class="index-home">
 <div class="blank" style="padding-top: 0px;"></div>
 
@@ -682,7 +668,7 @@ section{
 <div id="content" class="site-content">
 
   
-    <div class="notice" style="margin-top:24px;height: 60px;margin-left:20px;margin-bottom: 10px ;width:97%">
+    <div class="notice" >
       <i class="iconfont icon-notification" style="margin-top: -2px;color: #f3e5e5;font-weight: bolder;">
       </i>
       <div style="font-size: 15px;font-weight: bolder;">【6.4】重排PC端页面  </div>
@@ -715,37 +701,38 @@ section{
     </i>
     快速链接 & 专题
   </h1>
-  <div style="width:110px;position: absolute;">
+  <div class="text-show" style="width:110px;position: absolute;">
     <a  class="bean bean-active-effect bean-small-button bean-small-button-hover" style="background-color:#389098;width:115px;height:115px;border-radius: 10px;margin-left:16px;">
       <div style="margin:7px;font-size: 20px;font-weight: bolder;"><span style="color:rgb(255, 255, 255);">快捷功能</span>
         <i class="iconfont icon-gongneng" style="color: #69dfda;font-size: 17px;margin-left: 32px;margin-top: -2px;position: absolute;"></i>
           <img src="/images/emoji/2233.gif" style="width: 60px;height: 58px;margin-top: -41px;margin-left: -38px;"></div>
     </a> 
   </div>
-  <div class="botton-float" style="margin-left: 141px;">
-    <a onclick="switchNightMode()" class="bean bean-active-effect bean-small-button bean-small-button-hover botton-day" id="nightBotton" style="width:85px;height:50px;border-radius: 10px;">
+
+  <div id="text-soc" class="botton-float" >
+    <a onclick="switchNightMode()" class="bean bean-active-effect bean-small-button bean-small-button-hover botton-day text-show" id="nightBotton" style="width:85px;height:50px;border-radius: 10px;">
       <div style="margin:0 auto;" ><i class="iconfont icon-icon_yejianqingtian" id="nightMode1" aria-hidden="false" style="font-size: 30px;color: rgb(255, 208, 0);"></i></div>
     </a>
-    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover" style="background-color:#910fac;width:200px;height:50px;border-radius: 10px;">
+    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover botton-float-each" style="background-color:#910fac;">
       <div style="margin:0 auto;"><i class="iconfont icon-youxi" style="color: #ffffff;font-size: 25px;"></i> <span style="color:rgb(255, 255, 255);font-size:17px;font-weight: bolder">ACG相关</span></div>
     </a>
-    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover" style="background-color:#00afe0;width:150px;height:50px;border-radius: 10px;margin-bottom:16px;">
+    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover botton-float-each" style="background-color:#00afe0;margin-bottom:16px;">
       <div style="margin:0 auto;"><i class="iconfont icon-pengyou" style="color: #ffffff;font-size: 25px;"></i> <span style="color:rgb(255, 255, 255);">推荐</span></div>
     </a>
-    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover pics1" style="background-color:#00afe0;width:193px;height:50px;border-radius: 10px;float: left;">
+    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover pics1 botton-float-each" style="background-color:#00afe0;float: left;">
     </a>
-    <a href="javascript:void(0);" onclick="AddFavorite('MikiBlog','https://rwl012.github.io')" title="添加到收藏夹" class="bean bean-active-effect bean-small-button bean-small-button-hover" style="background-color:#f1c586;width:100px;height:50px;border-radius: 10px;float: left;">
+    <a href="javascript:void(0);" onclick="AddFavorite('MikiBlog','https://rwl012.github.io')" title="添加到收藏夹" class="bean bean-active-effect bean-small-button bean-small-button-hover text-show" style="background-color:#f1c586;width:100px;height:50px;border-radius: 10px;float: left;">
       <div style="margin:9px;"><i class="iconfont icon-shoucang-shoucang" style="color: #fff3e2;font-size: 25px;"></i> <span style="color:rgb(255, 255, 255);font-size: 17px;font-weight: bolder;position:absolute;margin: 7px 2px;">收藏</span></div>
     </a>
-    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover" style="background-color:#ff7f6e;width:150px;height:50px;border-radius: 10px;float: left;">
+    <a  class="bean bean-active-effect bean-small-button bean-small-button-hover botton-float-each" style="background-color:#ff7f6e;float: left;">
       <div style="margin:0 33PX;"><i class="iconfont icon-huo" style="color: #ffec82;font-size: 25px;"></i> <span style="color:rgb(255, 255, 255);font-size: 17px;font-weight: bolder;position:absolute;margin: 7px 2px;">推荐</span></div>
     </a>
-    <a href="/comment/" class="bean bean-active-effect bean-small-button bean-small-button-hover pics" style="background-color:#00afe0;width:398px;height:50px;border-radius: 10px;float: left;">
+    <a href="/comment/" class="bean bean-active-effect bean-small-button bean-small-button-hover pics " style="background-color:#00afe0;height:50px;border-radius: 10px;float: left;">
       <i class="iconfont icon-w_liuyan" style="color: #e9e6d6;font-size: 25px;"></i><div style="margin:0 5px;color: white;font-size:17px;font-weight: bolder;letter-spacing: 5px;">留言区</div>
     </a>
 </div>
-<div style="width:110px;position: relative;margin-top:-116px;margin-left: 840px;">
-  <a  class="bean bean-active-effect bean-small-button bean-small-button-hover pics2" style="width:150px;height:115px;border-radius: 10px;">
+<div class="pic2-box">
+  <a  class="bean bean-active-effect bean-small-button bean-small-button-hover pics2">
     <div style="margin-left:-3px;margin-top: -56px;font-size: 20px;font-weight: bolder;"><span style="color:rgb(255, 255, 255);">宇宙探索</span>
       <i class="iconfont icon-hangtiantubiao-" style="color: #ffffff;font-size: 46px;font-weight: lighter;margin-left: -59px;margin-top: 15px;position: absolute;"></i>
     </div>
@@ -1181,7 +1168,7 @@ section{
             document.documentElement.scrollTop = 0;  //ie下
             document.body.scrollTop = 0;  //非ie
     }
-        
+
 //点击按钮后切换模式
 function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
@@ -1249,6 +1236,8 @@ function switchNightMode() {
       }
     }
 </script>
+
+
     </div>    
     <style>
     .fuhao{
@@ -1756,5 +1745,6 @@ $(document).ready(function() {
   </div>
 </body>
 <!--<script type="text/javascript" src="\js\snow.js"></script>-->
+<!--<script type="text/javascript" color="0,0,0" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
 <script type="text/javascript" src="/js/viewer.min.js"></script>
 </html>

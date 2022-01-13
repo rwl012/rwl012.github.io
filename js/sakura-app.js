@@ -1314,11 +1314,14 @@ var home = location.href,
 
       $(window).scroll(function () {
         var s = $(document).scrollTop()
+        var b
+        b = 1-s*0.0025
         if (s == h1) {
           $('.site-header').removeClass('yya')
         }
         if (s > h1) {
-          $('.site-header').addClass('yya')
+          $('.site-header').addClass('yya');
+          $('#centerbg').css("opacity",b)
         }
         if (s > h2) {
           $('.site-header').addClass('gizle')
@@ -1683,6 +1686,7 @@ $(document).ready(function () {
     $('p').remove('.head-copyright')
   }, 0)
 })
+
 
 
 // function aplayerF() {
