@@ -5100,6 +5100,7 @@ i.iconfont.down {
         height:50px;
         line-height:48px;
         margin-left: 10px;
+        margin-top: 2px;
         z-index: 999;
     }
     .site-title img {
@@ -5192,7 +5193,6 @@ h3#comments-list-title,nav#comments-navi {
     width:350px;
     height: 800px;
     transition:all .3s ease;
-    background-image: url(/images/movie/ba.png);
     background-size: 100% 90%;
     background-attachment:scroll;
 }
