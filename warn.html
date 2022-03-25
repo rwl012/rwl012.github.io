@@ -4,6 +4,7 @@
     <title>注意：不被支持的浏览器</title>
     <link rel="icon" href="/images/favicon.png">
     <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;user-scalable=no">
     <style type="text/css">
 
       body {
@@ -45,6 +46,9 @@
         opacity: 1;
         display: none;
       }
+      .or{
+        margin: 0 auto;
+      }
       a {
         color:#466acf;
         text-decoration:none;
@@ -60,11 +64,18 @@
       }
 
       /*移动端适配*/
-      @media screen and (max-width:850px){
-        body{width: 350px;}
+      @media screen and (max-width:500px){
+
+        p{
+          width: 70%;
+          margin: 10px auto;
+        }
+        .warn-pc1{
+          margin: 0 auto;
+        }
         .btn{margin-top: 20px;}
       }
-
+        
     </style>
 </head>
 <body>
@@ -73,7 +84,7 @@
     <p class="warn-pc1" style="font-size: 16px;margin-top: 10px;">【推荐使用 <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a> 或 <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Microsoft Edge </a> 以及其他主流浏览器访问本站。】</p>
     <p style="margin-bottom: 0;font-size: 20px;font-weight: bold;">打开方式：</p>
     <p style="margin-bottom: 0;font-size: 16px;">① 点击右上方选项选择[<span style="color: #466acf;">在浏览器打开</span>]</p>
-    <p style="font-size: 20px;margin: 0;">or</p>
+    <p class="or" style="font-size: 20px;">or</p>
     <div style="margin:0 0 30px 0;font-size: 17px;">② 直接在浏览器地址栏输入 <span style="border-bottom: 1px solid;padding: 3px;">https://rwl012.github.io</span> 
       <button onclick="clickme()" id="btnwork" class="btn" data-clipboard-text="https://rwl012.github.io">点击复制</button>
       <div class="alert"><i class="iconfont icon-gouhao"></i>  复制成功</div>
