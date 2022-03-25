@@ -1,35 +1,114 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0024)http://yansu.org/ie.html -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>警告：不被支持的浏览器</title>
+    <title>注意：不被支持的浏览器</title>
     <link rel="icon" href="/images/favicon.png">
     <meta name="robots" content="noindex">
     <style type="text/css">
+
       body {
-        width:600px;
+        width:100%;
         margin:50px auto;
         font:14px/1.5 'Trebuchet MS', sans-serif;
         text-align:center;
         background-color:#fafafa;
       }
-      h1 {
+      .warn-pc {
         margin:0;
-        color:#7D8B99;
-        font-size:180px;
+        color:#466acf;
+        font-size:50px;
+        font-weight: bold;
       }
-      h2, p {
-        color:#7D8B99;
+      .warn-pc1 {
+        margin: 0;
+      }
+      .btn{
+        color: #fafafa;
+        font-size: 15px;
+        font-weight: light;
+        width: 85px;
+        height: 30px;
+        margin-left: 5px;
+        border:none;
+        background-color: #466acf;
+        border-radius: 5px;
+      }
+      .alert{
+        width: 150px;
+        height: 30px;
+        color: #fafafa;
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing:3px;
+        background-color: rgb(100, 219, 179);
+        margin:9px auto 23px auto ;
+        opacity: 1;
+        display: none;
       }
       a {
-        color:#2EB695;
+        color:#466acf;
         text-decoration:none;
       }
+      span{
+        color: #466acf;
+        
+      }
+      img {
+        width: 397px;
+        height: 238px;
+        margin: 20px auto;
+      }
+
+      /*移动端适配*/
+      @media screen and (max-width:850px){
+
+        .btn{margin-top: 20px;}
+      }
+
     </style>
 </head>
 <body>
-    <h1>!</h1>
-    <h2>Not support IE9 and below</h2>
-    <h2>为保持体验良好，本站禁止不支持H5的浏览器访问</h2>
-    <p>墙裂推荐使用 <a href="https://www.chrome.com/" target="_blank">Chrome</a> 或 <a href="http://www.mozilla.org/" target="_blank">Firefox</a> 浏览器访问本站。</p>
+    <img src="images/a4xnv-1ohq1.png">
+    <p class="warn-pc1" style="font-weight: bold;font-size: 20px;">为了保持良好浏览体验，本站禁止微信内置浏览器/IE浏览器进行访问</p>
+    <p class="warn-pc1" style="font-size: 16px;margin-top: 10px;">【推荐使用 <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a> 或 <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Microsoft Edge </a> 以及其他主流浏览器访问本站。】</p>
+    <p style="margin-bottom: 0;font-size: 20px;font-weight: bold;">打开方式：</p>
+    <p style="margin-bottom: 0;font-size: 16px;">① 点击右上方选项选择[<span style="color: #466acf;">在浏览器打开</span>]</p>
+    <p style="font-size: 20px;margin: 0;">or</p>
+    <div style="margin:0 0 30px 0;font-size: 17px;">② 直接在浏览器地址栏输入 <span style="border-bottom: 1px solid;padding: 3px;">https://rwl012.github.io</span> 
+      <button onclick="clickme()" id="btnwork" class="btn" data-clipboard-text="https://rwl012.github.io">点击复制</button>
+      <div class="alert"><i class="iconfont icon-gouhao"></i>  复制成功</div>
+    </div>
+
 </body>
+
+<link rel="stylesheet" href="https:////at.alicdn.com/t/font_3126907_tgrnno3acwg.css">
+<script src="js/clipboard.min.js"></script>
+<script>
+//.btn为触发事件的对应元素
+var clipboard = new ClipboardJS('.btn');
+    
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        e.clearSelection();
+    });
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+    
+    function clickme(){
+    setTimeout(  
+      function Msgup(){  
+        var show_part = document.querySelector('.alert');
+        show_part.style.display = 'block';
+          },100 ) 
+    setTimeout(
+      function Msghide(){
+        var show_part = document.querySelector('.alert');show_part.style.display = 'none'},2000)
+    }
+</script>
+
+
 </html>

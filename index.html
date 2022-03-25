@@ -1263,6 +1263,11 @@ function switchNightMode() {
 
 
 <script> 
+      var useragent = navigator.userAgent;
+      if (useragent.match(/MicroMessenger/i) == "MicroMessenger") {
+        window.location.href = "warn.html"; //若不是微信浏览器，跳转到温馨error页面
+      }
+
   setTimeout(()=>{
     document.querySelectorAll('#block-button-1438 .bean-small-button').forEach(el=>{
         el.addEventListener('mouseenter',function(){
