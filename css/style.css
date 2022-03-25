@@ -2002,7 +2002,8 @@ i.iconfont.hotpost {
 @media(max-width:768px) {
     .float-content p {
     height:auto;
-    display:block
+    display:block;
+    margin: 0;
 }
 .post-bottom {
     display:none
@@ -2024,6 +2025,10 @@ i.iconfont.hotpost {
     float:none;
     border-radius: 0 0 25px 25px;
     border-top:0;
+    height: 185px;
+}
+.post-title h3{
+    margin: 0;
 }
 .post-list-thumb::before {
     content:'';
@@ -4024,10 +4029,12 @@ li.feature-2 {
     font-size:18px;
     padding-right:10px
 }
+
 .notice-content {
     display:initial;
     vertical-align:middle
 }
+
 
 .headertop {
     position:relative;
@@ -4037,11 +4044,20 @@ li.feature-2 {
 @media(max-width:860px) {
     .notice {
         display: block;
-        margin-top:40px;
-        margin-bottom:20px;
+        margin-top:-30px;
+        margin-bottom:-10px;
         margin-left: auto;
-        margin-right:auto
+        margin-right:auto;
+        background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/6t7hu-1y6sf.gif);
+        color: #f7f0f0;
+        background-position: 35% 60%;
+        background-size: 282% 175%;
     }
+
+    .notice i {
+        color:#f7f0f0;
+    }
+
     .headertop {
         position:relative;
         overflow:visible;
@@ -4116,7 +4132,7 @@ li.feature-2 {
     width:100%;
     margin:0;
     padding:0;
-    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/5d114977b9e30441f11fc5a5c1011dda64f458ba.jpg);
+    background-image: url(https://cdn.jsdelivr.net/gh/rwl012/PicGo/img/amnzj-kn287.webp);
     background-repeat:no-repeat;
     background-size:cover;
     z-index:-1;
