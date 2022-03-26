@@ -1315,7 +1315,7 @@ var home = location.href,
       $(window).scroll(function () {
         var s = $(document).scrollTop()
         var b
-        b = 1-s*0.0025
+        b = 1-s*0.0015
         if (s == h1) {
           $('.site-header').removeClass('yya')
         }
