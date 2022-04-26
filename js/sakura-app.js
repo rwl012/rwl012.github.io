@@ -394,7 +394,7 @@ function scrollBar () {
       var s = $(window).scrollTop()
       var a = $(document).height()
       var b = $(window).height()
-      var result = parseInt(s / (a - b) * 100)
+      var result = parseInt(s / (a - b)  * 22.2)
       $('#bar').css('width', result + '%')
       if (false) {
         if (result >= 0 && result <= 19) {
@@ -1129,9 +1129,11 @@ var home = location.href,
         if ($('#main-container').hasClass('open')) {
           $('.iconflat').css('width', '50px').css('height', '50px')
           $('.openNav').css('height', '50px')
+          $('.aplayer').css('display','block')
         } else {
           $('.iconflat').css('width', '100%').css('height', '100%')
           $('.openNav').css('height', '100%')
+          $('.aplayer').css('display','none')
         }
         $('body').toggleClass('navOpen')
         $('#main-container,#mo-nav,.openNav').toggleClass('open')
@@ -1143,15 +1145,20 @@ var home = location.href,
         if ($('#main-container').hasClass('open')) {
           $('.iconflat').css('width', '50px').css('height', '50px')
           $('.openNav').css('height', '50px')
+          $('.aplayer').css('display','block')
         } else {
           $('.iconflat').css('width', '100%').css('height', '100%')
           $('.openNav').css('height', '100%')
+          $('.aplayer').css('display','none')
         }
         $('body').toggleClass('navOpen')
         $('#main-container,#mo-nav,.openNav').toggleClass('open')
       })
+      $('#mo-nav ul').on('click', function () {
+        $('.aplayer').css('display','block')
+    })
     },
-    
+
     MNH: function () {
       if ($('body').hasClass('navOpen')) {
         $('body').toggleClass('navOpen')
