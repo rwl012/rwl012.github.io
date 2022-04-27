@@ -578,7 +578,7 @@ $(window).scroll(function () {
     var bh = $('#main-container').height()
     var st = $(document).scrollTop()
     if (wk < 850){
-      mt = - bh + st 
+      mt = - bh + st +10
       $('.aplayer').css("margin-top",mt);
       if (st >= 800||st == 0 ) {
         $('.aplayer-body').css("display","none")
