@@ -35,7 +35,7 @@
     box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
 }
 @media (max-width:850px){
-    .aplayer{width:366px;transition: all 0.6s;-ms-transition:all 0.6s}
+    .aplayer{width:353px;transition: all 0.6s;-ms-transition:all 0.6s}
 }
 .aplayer * {
     box-sizing:content-box
@@ -1502,7 +1502,7 @@ a:hover,a:active {
     left:365spx
 }
 .site-top .lower-cantiner {
-    left:0
+    left:726px
 }
 .site-top .lower nav.hide {
     display:none !important
@@ -5354,7 +5354,7 @@ i.iconfont.js-toggle-search.iconsearch {
 #mo-nav ul li {
     transition-duration:.25s;
     display:block;
-    padding:6px 40px;
+    padding:4px 40px;
     color:white;
     letter-spacing:.02em;
     text-align:left
@@ -5372,8 +5372,8 @@ i.iconfont.js-toggle-search.iconsearch {
     padding:5px 9px
 }
 #mo-nav li ul li a {                    /*移动端侧边栏字体大小设置*/
-    font-size:13px;
-    color:#9cacc5
+    font-size:14px;
+    color:#424141
 }
 
 @media (prefers-color-scheme: dark) {           /*移动端侧边栏字体暗黑模式设置*/
@@ -5382,7 +5382,7 @@ i.iconfont.js-toggle-search.iconsearch {
   }
   
 @media (prefers-color-scheme: light) {
-    #mo-nav li ul li a {color: #afabd0;}
+    #mo-nav li ul li a {color: #424141;}
   
   }
 

@@ -584,15 +584,19 @@ if (document.body.clientWidth <= 860 && !window.is_app) {
       document.getElementById('moblieGoTop').style.display = 'block';
       document.getElementById('qiehuanqian').style.marginBottom= '100px';
       document.getElementById('qiehuanqian1').style.marginBottom= '50px';
+      document.getElementById('aplayershow').style.marginBottom= '150px';
       document.getElementById('qiehuanqian').style.transition= 'margin-bottom 0.5s ease';
       document.getElementById('qiehuanqian1').style.transition= 'margin-bottom 0.7s ease';
       document.getElementById('qiehuanqian1').style.transition= 'margin-bottom 0.5s ease';
+      document.getElementById('aplayershow').style.transition= 'margin-bottom 0.5s ease';
     } else {
       document.getElementById('moblieGoTop').style.display = 'none';
       document.getElementById('qiehuanqian').style.marginBottom= '0px';
       document.getElementById('qiehuanqian').style.transition= 'margin-bottom 0.8s ease';
       document.getElementById('qiehuanqian1').style.marginBottom= '0px';
       document.getElementById('qiehuanqian1').style.transition= 'margin-bottom 0.7s ease';
+      document.getElementById('aplayershow').style.marginBottom= '0px';
+      document.getElementById('aplayershow').style.transition= 'margin-bottom 0.7s ease';
     }
   }
 
