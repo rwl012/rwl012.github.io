@@ -33,6 +33,7 @@
     z-index:999;
     width: 595px;
     box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
+    transition: all 0.8s
 }
 @media (max-width:850px){
     .aplayer{width:366px}

@@ -394,7 +394,7 @@ function scrollBar () {
       var s = $(window).scrollTop()
       var a = $(document).height()
       var b = $(window).height()
-      var result = parseInt(s / (a - b)  * 22.2)
+      var result = parseInt(s / (a - b)  * 10)
       $('#bar').css('width', result + '%')
       if (false) {
         if (result >= 0 && result <= 19) {
