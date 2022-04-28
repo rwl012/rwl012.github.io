@@ -1158,9 +1158,12 @@ var home = location.href,
         $('body').toggleClass('navOpen')
         $('#main-container,#mo-nav,.openNav').toggleClass('open')
       })
-      $('#mo-nav ul').on('click', function () {
+      $('#mo-nav li ul li a').on('click', function () {
         $('.aplayer').css('display','block')
     })
+    $('.biaoqian2').on('click', function () {
+      $('.aplayer').css('display','block')
+  })
     },
 
     MNH: function () {

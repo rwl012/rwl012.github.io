@@ -4,7 +4,8 @@ src:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/fonts/sharejs/iconfont.eot?#
 }
 
 .social-share {
-    display: inline-block;
+  margin-top:4px;
+  display: inline-block;
   font-family: "socialshare" !important;
   font-size: 16px;
   font-style: normal;
@@ -80,20 +81,24 @@ src:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/fonts/sharejs/iconfont.eot?#
 .social-share .social-share-icon {
     position: relative;
     display: inline-block;
-    width: 16px;
+    width: 30px;
     height: 16px;
-    font-size: 10px;
+    font-size: 21px;
     border-radius: 50%;
     line-height: 16px;
     color: #666;
     text-align: center;
     vertical-align: middle;
-    transition: background 0.6s ease-out 0s;
+    /*transition: background 0.6s ease-out 0s;*/
 }
 
 .social-share .social-share-icon:hover {
   background: #666;
-  color: #fff
+  color: #fff;
+  width:27px;
+  height: 27px;
+  margin-top: 2px;
+  padding-top: 5px;
 }
 
 .social-share .icon-weibo {
@@ -273,7 +278,7 @@ src:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/fonts/sharejs/iconfont.eot?#
     width: 32px;
     height: 32px;
     font-size: 20px;
-    border-radius: 50%;
+    border-radius: 21%;
     line-height: 32px;
     border: 1px solid;
     text-align: center;

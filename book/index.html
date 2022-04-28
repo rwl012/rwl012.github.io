@@ -10,12 +10,12 @@
   }
   
   @media (prefers-color-scheme: light) {
-    .yemian {background: rgba(255, 255, 255, 0);}
+    .yemian {background: rgb(255, 255, 255);}
   
   }  /*页面暗黑模式*/
 
   .yemiana{
-    background-color:  rgba(231, 15, 15, 0);
+    background-color:  rgb(255, 255, 255);
     }
   @media (prefers-color-scheme: dark) {
     .yemiana {background:  rgba(29, 28, 28, 0.377);}
@@ -671,7 +671,8 @@ $(window).scroll(function () {
       </div>
     </div>
   </section>
-  <style>
+  <link rel="stylesheet" href="https:////at.alicdn.com/t/font_3126907_ryzx1karkv.css">
+<style>
   .biaoqian2{          /*侧边栏字体颜色暗黑模式*/
     color: #555;
     font-size: 15px;
@@ -727,7 +728,25 @@ $(window).scroll(function () {
     display:block
   }
 }
-
+#aplayershow {    
+    position:fixed;
+    display: block;
+    margin-bottom: 0px;
+    transition: margin-bottom 2s;
+    bottom:10px;
+    right:5px;
+    z-index:98;
+    border:0;
+    outline:0;
+    background-color:#fff;
+    color:#404040;
+    cursor:pointer;
+    padding:15px;
+    border-radius:10px;
+    border-radius:12px;
+    box-shadow:0 0 2px 0 rgba(0,0,0,.12),0px 2px 2px 0 rgba(0,0,0,.24);
+    transition:box-shadow .2s ease
+  }
 .iconflata {
     background:none;
     float:left
@@ -751,25 +770,7 @@ $(window).scroll(function () {
     box-shadow:0 0 2px 0 rgba(0,0,0,.12),0px 2px 2px 0 rgba(0,0,0,.24);
     transition:box-shadow .2s ease
 }
-#aplayershow {    
-    position:fixed;
-    display: block;
-    margin-bottom: 0px;
-    transition: margin-bottom 2s;
-    bottom:10px;
-    right:5px;
-    z-index:98;
-    border:0;
-    outline:0;
-    background-color:#fff;
-    color:#404040;
-    cursor:pointer;
-    padding:15px;
-    border-radius:10px;
-    border-radius:12px;
-    box-shadow:0 0 2px 0 rgba(0,0,0,.12),0px 2px 2px 0 rgba(0,0,0,.24);
-    transition:box-shadow .2s ease
-  }
+
   .fuhaocolor{color:rgb(94, 91, 91)}
 
 @media(max-width: 800px){
@@ -782,6 +783,7 @@ $(window).scroll(function () {
     margin: 0 10 10 10;
     border-radius: 25px;
   }
+
 }
 </style>
 
@@ -818,7 +820,7 @@ $(window).scroll(function () {
       <li>
         <a href="/">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-fort-awesome faa-shake biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-fort-awesome faa-shake biaoqian2" aria-hidden="true" style="color: #00c091 "></i>
             首页
           </span>
         </a>
@@ -828,7 +830,7 @@ $(window).scroll(function () {
       <li>
         <a href="/archives">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-archive faa-shake biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-archive faa-shake biaoqian2" aria-hidden="true" style="color: #f3a034 "></i>
             归档
           </span>
         </a>
@@ -856,7 +858,7 @@ $(window).scroll(function () {
       <li>
         <a href="javascript:;">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-bars biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-bars biaoqian2" aria-hidden="true" style="color: #00afe0 "></i>
             分类
           </span>
         </a>
@@ -898,7 +900,7 @@ $(window).scroll(function () {
       <li>
         <a href="/comment/">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-pencil-square-o faa-tada biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-pencil-square-o faa-tada biaoqian2" aria-hidden="true" style="color: #152c58 "></i>
             留言板
           </span>
         </a>
@@ -908,7 +910,7 @@ $(window).scroll(function () {
       <li>
         <a href="/">
           <span class="faa-parent animated-hover biaoqian2">
-            <i class="fa  fa-heart biaoqian2" aria-hidden="true"></i>
+            <i class="fa  fa-heart biaoqian2" aria-hidden="true" style="color: #ff5d47 "></i>
             关于
           </span>
         </a>

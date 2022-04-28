@@ -19,7 +19,7 @@ for(var s=a.css,u=a.type,l=a.enterClass,f=a.enterToClass,p=a.enterActiveClass,d=
 !function(e,t){"use strict";"function"==typeof define&&define.amd?define([],function(){return e.BotUI=t(e)}):e.BotUI=t(e)}("undefined"!=typeof window?window:this,function(e,t){"use strict";return function(t,n){function o(e,t,n,o){return"<a class='botui-message-content-link' target='"+(o?"blank":"")+"' href='"+n+"'>"+t+"</a>"}function i(e){return e.replace(v.image,"<img class='botui-message-content-image' src='$2' alt='$1' />").replace(v.icon,"<i class='botui-icon botui-message-content-icon fa fa-$1'></i>").replace(v.link,o)}function r(e,t){var n=document.createElement("script");n.type="text/javascript",n.src=e,t&&(n.onload=t),document.body.appendChild(n)}function s(e){y.action.addMessage&&h.message.human({delay:100,content:e}),y.action.show=!y.action.autoHide}function a(e){if(!e.loading&&!e.content)throw Error('BotUI: "content" is required in a non-loading message object.');e.type=e.type||"text",e.visible=!e.delay&&!e.loading;var t=y.messages.push(e)-1;return new Promise(function(n,o){setTimeout(function(){e.delay&&(e.visible=!0,e.loading&&(e.loading=!1)),n(t)},e.delay||0)})}function u(e){return"string"==typeof e&&(e={content:e}),e||{}}function c(e,t){for(var n in e)t.hasOwnProperty(n)||(t[n]=e[n])}function d(e){if(!e.action)throw Error('BotUI: "action" property is required.')}function l(e){return d(e),c({type:"text",cssClass:"",autoHide:!0,addMessage:!0},e),y.action.type=e.type,y.action.cssClass=e.cssClass,y.action.autoHide=e.autoHide,y.action.addMessage=e.addMessage,new Promise(function(t,n){p=t,setTimeout(function(){y.action.show=!0},e.delay||0)})}if(n=n||{},!t)throw Error("BotUI: Container id is required as first argument.");if(!document.getElementById(t))throw Error("BotUI: Element with id #"+t+" does not exist.");if(!e.Vue&&!n.vue)throw Error("BotUI: Vue is required but not found.");var f,m,p,g={debug:!1,fontawesome:!0},h={},v={icon:/!\(([^\)]+)\)/gim,image:/!\[(.*?)\]\((.*?)\)/gim,link:/\[([^\[]+)\]\(([^\)]+)\)(\^?)/gim};e.Vue=e.Vue||n.vue;for(var b in g)n.hasOwnProperty(b)&&(g[b]=n[b]);e.Promise||Promise||options.promise||r("https://cdn.jsdelivr.net/es6-promise/4.1.0/es6-promise.min.js");var w={template:"<div class=\"botui botui-container\" v-botui-container><div class=\"botui-messages-container\"><div v-for=\"msg in messages\" class=\"botui-message\" :class=\"msg.cssClass\" v-botui-scroll><transition name=\"slide-fade\"><div v-if=\"msg.visible\" :class=\"[{human: msg.human, \'botui-message-content\': true}, msg.type]\"><span v-if=\"msg.type == \'text\'\" v-text=\"msg.content\" v-botui-markdown></span> <iframe v-if=\"msg.type == \'embed\'\" :src=\"msg.content\" frameborder=\"0\" allowfullscreen></iframe></div></transition><div v-if=\"msg.loading\" class=\"botui-message-content loading\"><i class=\"dot\"></i><i class=\"dot\"></i><i class=\"dot\"></i></div></div></div><div class=\"botui-actions-container\"><transition name=\"slide-fade\"><div v-if=\"action.show\" v-botui-scroll><form v-if=\"action.type == \'text\'\" class=\"botui-actions-text\" @submit.prevent=\"handle_action_text()\" :class=\"action.cssClass\"><i v-if=\"action.text.icon\" class=\"botui-icon botui-action-text-icon fa\" :class=\"\'fa-\' + action.text.icon\"></i> <input type=\"text\" ref=\"input\" :type=\"action.text.sub_type\" v-model=\"action.text.value\" class=\"botui-actions-text-input\" :placeholder=\"action.text.placeholder\" :size=\"action.text.size\" :value=\"action.text.value\" :class=\"action.text.cssClass\" required v-focus/> <button type=\"submit\" :class=\"{\'botui-actions-buttons-button\': !!action.text.button, \'botui-actions-text-submit\': !action.text.button}\"><i v-if=\"action.text.button && action.text.button.icon\" class=\"botui-icon botui-action-button-icon fa\" :class=\"\'fa-\' + action.text.button.icon\"></i> <span>{{(action.text.button && action.text.button.label) || \'Go\'}}</span></button></form><div v-if=\"action.type == \'button\'\" class=\"botui-actions-buttons\" :class=\"action.cssClass\"> <button type=\"button\" :class=\"button.cssClass\" class=\"botui-actions-buttons-button\" v-for=\"button in action.button.buttons\" @click=\"handle_action_button(button)\" autofocus><i v-if=\"button.icon\" class=\"botui-icon botui-action-button-icon fa\" :class=\"\'fa-\' + button.icon\"></i> {{button.text}}</button></div></div></transition></div></div>",data:function(){return{action:{text:{size:30,placeholder:"Write here .."},button:{},show:!1,type:"text",autoHide:!0,addMessage:!0},messages:[]}},computed:{isMobile:function(){return e.innerWidth&&e.innerWidth<=768}},methods:{handle_action_button:function(e){s(e.text);var t={type:"button",text:e.text,value:e.value};for(var n in e)e.hasOwnProperty(n)&&"type"!==n&&"text"!==n&&"value"!==n&&(t[n]=e[n]);p(t)},handle_action_text:function(){this.action.text.value&&(s(this.action.text.value),p({type:"text",value:this.action.text.value}),this.action.text.value="")}}};e.Vue.directive("botui-markdown",function(e,t){"false"!=t.value&&(e.innerHTML=i(e.textContent))}),e.Vue.directive("botui-scroll",{inserted:function(e){m.scrollTop=m.scrollHeight}}),e.Vue.directive("focus",{inserted:function(e){e.focus()}}),e.Vue.directive("botui-container",{inserted:function(e){m=e}}),f=new e.Vue({components:{"bot-ui":w}}).$mount("#"+t);var y=f.$children[0];return h.message={add:function(e){return a(u(e))},bot:function(e){return e=u(e),a(e)},human:function(e){return e=u(e),e.human=!0,a(e)},get:function(e){return Promise.resolve(y.messages[e])},remove:function(e){return y.messages.splice(e,1),Promise.resolve()},update:function(e,t){var n=y.messages[e];return n.content=t.content,n.visible=!t.loading,n.loading=!!t.loading,Promise.resolve(t.content)},removeAll:function(){return y.messages.splice(0,y.messages.length),Promise.resolve()}},h.action={show:l,hide:function(){return y.action.show=!1,Promise.resolve()},text:function(e){return d(e),y.action.text=e.action,l(e)},button:function(e){return d(e),e.type="button",y.action.button.buttons=e.action,l(e)}},g.fontawesome&&r("https://use.fontawesome.com/ea731dcb6f.js"),g.debug&&(h._botApp=f),h}});
 
 function bot_ui_ini() {
-    var botui = new BotUI("hello-mashiro")
+    var botui = new BotUI("hello-miki")
     botui.message.add({
         delay: 800,
         content: "Hello Hello 👋 "
@@ -76,61 +76,147 @@ function bot_ui_ini() {
                         botui.action.button({
                         delay: 2200,
                         action: [{
-                            text: "那为什么博客名叫Miki？ 🤔",
-                            value: "why-mashiro"
+                            text: "里面有什么呢？",
+                            value: "whatsee"
+                            },{
+                                text:"搭了多久呢？",
+                                value: "is-easy"
                             }]
-                        }).then(function (a) {
-                                thirdpart()
+                        }).then(function (b) {
+                            "whatsee" == b.value && life();
+                            "is-easy" == b.value && techo()
                         })
                     })
                 })
             })
+        };
+        var life = function(){
+            thirdpart()
+        },
+        techo = function () {
+            botui.message.add({
+                delay: 600,
+                content: "emmm这个网站前前后后搭了我一两年，中间因为不满意效果，推倒重来了一次"
+            }).then(function(){
+                botui.message.add({
+                    delay:2200,
+                    content:"属实是拖延症+强迫症晚期了😑"
+                }).then(function () {
+                        botui.message.add({
+                            delay: 2200,
+                            content: "不过慢慢悠悠，也算是完成了~"
+                        }).then(function(){
+                            botui.action.button({
+                            delay:2000,
+                            action:[{
+                                text:"博客名叫Miki有什么含义吗？ 🤔",
+                                value:"goon"
+                                }]
+                            }).then(function () {
+                                fourthpart()
+                        })        
+                    })        
+                })
+            })        
         },
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "miki的话是我在学日语的时候取的名字，因为想尽量保留名字中文发音，兼顾美观就选用ミキ[miki]做名字啦"
-            }).then(function () {
-                botui.action.button({
-                    delay: 1500,
-                    action: [{
-                        text: "那关于你呢？ 🤔",
-                        value: "why-cat"
-                    }]
-                }).then(function (a) {
-                    fourthpart()
-                })
+                content: "网站里面主要是写的我的日常、体验和感想居多，还有一丢丢的电影番剧书籍推荐"
+            }).then(function(){
+                botui.message.add({
+                    delay: 2000,
+                    content:"当然也可以在留言区给我留言！"
+                }).then(function () {
+                    botui.action.button({
+                        delay: 1500,
+                        action: [{
+                            text: "博客名叫Miki有什么含义吗？ 🤔",
+                            value: "goon"
+                        }]
+                    }).then(function (a) {
+                        fourthpart()
+                    })
+                })    
             })
         },
         fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "因为对GitHub有种执念… "
-            }).then(function () {
+                content: "miki的话是我在学日语的时候取的名字"
+            }).then(function(){
                 botui.message.add({
-                    delay: 1100,
-                    content: "而且我真的是猫控！"
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1500,
-                        action: [{
-                            text: "域名有什么含意吗？(ง •_•)ง",
-                            value: "why-domain"
-                        }]
-                    }).then(function (a) {
-                        fifthpart()
+                    delay:2000,
+                    content:"因为想尽量保留名字中文发音同时兼顾美观就选用ミキ[miki]做名字啦"
+                    }).then(function () {
+                        botui.message.add({
+                            delay: 2000,
+                            content: "域名也是一样的~本来想要miki.cn的，结果已经被注册了"
+                        }).then(function(){
+                            botui.message.add({
+                                delay:2000,
+                                content:"还有什么想知道的吗？😝"
+                            }).then(function () {
+                                botui.action.button({
+                                    delay: 2000,
+                                    action: [{
+                                        text: "想了解一下你！",
+                                        value: "want-know"
+                                    },{
+                                        text:"没有了哦😫",
+                                        value:"no-know"
+                                    }]
+                            }).then(function (c) {
+                                "want-know" == c.value && wakw();
+                                "no-know" == c.value && nokw()
+                            })
+                        })    
                     })
                 })
             })
+        };
+        var nokw = function(){
+            fifthpart()
+        },
+        wakw = function () {
+            botui.message.add({
+                delay: 600,
+                content: "我比较喜欢尝试一下新的东西"
+            }).then(function(){
+                botui.message.add({
+                    delay:2200,
+                    content:"捣鼓捣鼓网站，PS还有视频制作，目前的话想尝试渲染来做MMD！"
+                }).then(function () {
+                        botui.message.add({
+                            delay: 2200,
+                            content: "空闲时间喜欢看看剧还有电影，偶尔也会打游戏"
+                        }).then(function(){
+                            botui.message.add({
+                                delay:2200,
+                                content:"会日语的话还可以交流交流，一起备考N2！"
+                            }).then(function(){
+                                botui.action.button({
+                                delay:2000,
+                                action:[{
+                                    text:"哇哦！😆",
+                                    value:"goon"
+                                    }]
+                                }).then(function () {
+                                    fifthpart()
+                            }) 
+                        })       
+                    })        
+                })
+            })        
         },
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，看备案信息你就知道了=.= 本来想要zheng.xin的，但50万真买不起。。"
+                content: "那介绍就到这里了"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "那么，仔细看看我的博客吧？ ^_^"
+                    content: "记得常来这里看看哦！🤩"
                 })
             })
         } 
